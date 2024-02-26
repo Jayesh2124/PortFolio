@@ -1,0 +1,95 @@
+<div>
+  <form [formGroup]="dataForm" (ngSubmit)="submitForm()">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Address</th>
+          <th>cars</th>
+        </tr>
+      </thead>
+      <tbody formArrayName="rows">
+        <tr *ngFor="let row of tableData let i = index" [formGroupName]="i">
+          <td>
+            <input type="text" formControlName="name" />
+            <div
+              *ngIf="rowsFormArray?.at(i)?.get('name')?.hasError('required') && rowsFormArray?.at(i)?.get('name')?.touched ">
+              Name is required. 
+            </div>
+            <div
+              *ngIf="rowsFormArray?.at(i)?.get('name')?.hasError('minlength') && rowsFormArray?.at(i)?.get('name')?.touched">
+              Name should be at least 3 characters.
+            </div>
+          </td>
+          <td>
+            <input type="number" formControlName="age" />
+            <div
+              *ngIf="rowsFormArray?.at(i)?.get('age')?.hasError('required') && rowsFormArray?.at(i)?.get('age')?.touched">
+              Age is required.
+            </div>
+            <div *ngIf="rowsFormArray?.at(i)?.get('age')?.hasError('min') && rowsFormArray?.at(i)?.get('age')?.touched">
+              Age should be at least 18.
+            </div>
+          </td>
+          <td>
+            <input type="text" formControlName="address" />
+            <div
+              *ngIf="rowsFormArray?.at(i)?.get('address')?.hasError('required') && rowsFormArray?.at(i)?.get('address')?.touched">
+              Address is required.
+            </div>
+          </td>
+          <td>
+            <input type="text" formControlName="phone" />
+            <div
+              *ngIf="rowsFormArray?.at(i)?.get('phone')?.hasError('required') && rowsFormArray?.at(i)?.get('phone')?.touched || dataForm.valid">
+              phone is required.
+            </div>
+          </td>
+          <td>
+            <ng-select [items]="cars" bindLabel="name" bindValue="id" formControlName="selectedCar"
+              (change)="submitForm()" [disabled]="disabledDrop">
+            </ng-select>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="submit" (click)="submitForm()" >Submit</button>
+    <br><br>
+    <button (click)="initNewDataRow()" >  Add Row </button>
+  </form>
+</div>  
+
+
+
+<br><br>
+<input type="text" appNumericInput style="border: 3px solid black;" >
+
+
+
+<div class="row">
+  <div class="col-sm-2">
+
+
+  </div>
+  <div class="col-sm-2"></div>
+  <div class="col-sm-2"></div>
+
+
+</div>
+
+<!-- 
+  <tbody>
+  <tr *ngFor="let records of mf.data; let index = index" [formGroupName]="index">
+  <td>{{records.id}}</td>
+  <td>
+
+  <input #iame="ngModel" (change)="collectUpdateObjectid(records.id)"
+  class="form-control" type="text" name="name" maxlength="128"
+  formControlName="name" (blur)="checkValidation(index)"
+  [(ngModel)]=records.name required />
+  <td>
+  ng-select (change)="collectUpdateObjectid(records.id)"
+  names adGroup (blur)="checkvalidation (index) formControlName="adGroup" style="width: 12ren" items]="adGroupList bindLabel="name" placeholder"Select">
+  </td>
+</tbody> -->
