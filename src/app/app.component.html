@@ -1,1088 +1,805 @@
 <!-- ng build --output-path docs --base-href /PortFolio/ -->
 <!-- Navigation Section -->
 <div>
-  <header class="bg-stone-100 sticky top-0 z-10 text-black transition-all duration-300">
-    <section class="max-w-6xl mx-auto  flex justify-between items-center">
-      <h1 class="text-xl font-medium">
-        <a href="#">
-          <img src="./assets/Logo.png" alt="JS" class="w-10 cursor-pointer" /></a>
-      </h1>
-      <div class="flex justify-center">
-        <!-- Menu on the Screen resolution more than the Mobile  -->
-        <nav class="hidden md:block space-x-8 text-xl" aria-label="main">
-          <a href="#About" class="hover:opacity-80 hover:font-bold">
-            About
+
+  <header id="header">
+    <div class="flex flex-col">
+      <!-- Profile View Section -->
+      <div class="profile m-3">
+        <img src="../assets/Images/Profile-bg.png" alt=""
+          class="w-full h-auto rounded-full border-double border-4 border-sky-500">
+        <h1 class="text-2xl text-slate-50 text-center pt-2"> Jayesh Sutar </h1>
+        <div class="mt-3 text-center flex gap-5 flex-row justify-center ">
+          <a href="http://" target="_blank" rel="">
+            <svg fill="blue" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0"
+              class="h-8 fill-current text-slate-100 hover:text-blue-700 hover:shadow-lg hover:shadow-blue-500 "
+              viewBox="0 0 24 24">
+              <path stroke="none"
+                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+              <circle cx="4" cy="4" r="2" stroke="none"></circle>
+            </svg>
           </a>
-          <a href="#Experience" class="hover:opacity-80 hover:font-bold">
-            Experience
+          <a class="link" href="#" data-tippy-content="@github_handle"
+            class="hover:shadow-lg hover:shadow-green-500 hover:rounded-full">
+            <svg class="h-8 fill-current text-slate-100 hover:text-green-700" role="img" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <title>GitHub</title>
+              <path
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+            </svg></a>
+          <a href="http://" target="_blank" rel="" class="hover:shadow-lg hover:shadow-red-500 hover:rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" stroke="currentColor" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="0" class="h-8 fill-current text-slate-100 hover:text-red-700 ">
+              <path
+                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+            </svg>
           </a>
-          <a href="#Project" class="hover:opacity-80 hover:font-bold">
-            Projects
-          </a>
-          <a href="#ContactUs" class="hover:opacity-80 hover:font-bold">
-            Contact
-          </a>
-        </nav>
-        <!-- Menu btn on Mobile Display -->
-        <button #mobile_menu_button class="text-3xl md:hidden focus:outline-none" (click)="toggel()">
-          &#9776;
-        </button>
+        </div>
       </div>
-      <!-- Dark mode button icon -->
-      <div class="hidden md:block text-end">
-        <a class="text-blue-600 underline cursor-pointer"> </a>
-      </div>
-    </section>
-    <!-- Mobile Menu -->
-    <div #mobile_menu class="hidden md:hidden">
-      <ul class="list-none p-3 mx-2">
-        <li class="hover:bg-cyan-200 rounded-lg  "> <a href="#About" class="block py-2 "> About</a> </li>
-        <li class="hover:bg-cyan-200 rounded-lg  "> <a href="#Experience" class="block py-2 "> Experience </a></li>
-        <li class="hover:bg-cyan-200 rounded-lg  "> <a href="#Project" class="block py-2 "> Projects </a> </li>
-        <li class="hover:bg-cyan-200 rounded-lg  "> <a href="#ContactUs" class="block py-2 "> Contact </a> </li>
-      </ul>
     </div>
+
+    <!-- Navigation bar from Here  -->
+    <nav id="navbar" class="pt-8 nav text-slate-50">
+
+      <ul class="flex flex-col  gap-6 justify-center ">
+        <li><a href="#hero" class="nav-link scrollto active">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" stroke="currentColor" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="0" class="h-6 fill-current text-slate-100 inline-flex">
+              <path
+                d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+            </svg>
+            <span class="text-xl mx-3 ">Home</span>
+          </a>
+        </li>
+        <li><a href="#about" class="nav-link scrollto">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" stroke="currentColor" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="0" class="h-6 fill-current text-slate-100 inline-flex">
+              <path
+                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+            </svg>
+            <span class="text-xl mx-4 ">About</span>
+          </a>
+        </li>
+        <li><a href="#resume" class="nav-link scrollto">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" stroke="currentColor" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="0" class="h-6 fill-current text-slate-100 inline-flex">
+              <path
+                d="M320 464c8.8 0 16-7.2 16-16V160H256c-17.7 0-32-14.3-32-32V48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H320zM0 64C0 28.7 28.7 0 64 0H229.5c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64z" />
+            </svg>
+            <span class="text-xl mx-4 ">Resume</span>
+          </a>
+        </li>
+        <li><a href="#portfolio" class="nav-link scrollto">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" stroke="currentColor" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="0" class="h-6 fill-current text-slate-100 inline-flex">
+
+              <path
+                d="M0 32C0 14.3 14.3 0 32 0H160c17.7 0 32 14.3 32 32V416c0 53-43 96-96 96s-96-43-96-96V32zM223.6 425.9c.3-3.3 .4-6.6 .4-9.9V154l75.4-75.4c12.5-12.5 32.8-12.5 45.3 0l90.5 90.5c12.5 12.5 12.5 32.8 0 45.3L223.6 425.9zM182.8 512l192-192H480c17.7 0 32 14.3 32 32V480c0 17.7-14.3 32-32 32H182.8zM128 64H64v64h64V64zM64 192v64h64V192H64zM96 440a24 24 0 1 0 0-48 24 24 0 1 0 0 48z" />
+            </svg>
+            <span class="text-xl mx-3 ">Portfolio</span>
+          </a>
+        </li>
+        <li><a href="#services" class="nav-link scrollto">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+              class="h-6 fill-current text-slate-100 inline-flex">
+              <path
+                d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V280.4c-17-15.2-39.4-24.4-64-24.4H64c-24.6 0-47 9.2-64 24.4V96zM64 288H448c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V352c0-35.3 28.7-64 64-64zM320 416a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm128-32a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z" />
+            </svg>
+            <span class="text-xl mx-3 ">Services</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
   </header>
 
+  <!-- Section Hero -->
+  <section id="hero" class="flex flex-col justify-center items-center">
+    <div class="hero-container">
+      <p class="text-black pacifico-regular text-6xl">Jayesh Sutar</p>
+      <p class="text-black pacifico-regular text-xl mt-4 pt-4"> I am Software Developer </p>
+    </div>
 
+  </section>
 
-  <div class="min-h-screen bg-slate-50 backImg">
-    <!-- Home Page Banner Section -->
-    <main class="">
-      <div class="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
+  <!-- Main section  -->
+  <main class="mx-auto md:ml-[300px] justify-center">
 
-        <!--Main Col-->
-        <div id="profile" class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none  opacity-75 mx-6 lg:mx-0">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="mt-[80px] px-5">
 
+        <div class="m-auto p-2 ">
+          <p class="text-4xl salsa-regular  text-[#173b6c] font-bold">About</p>
+          <hr class="w-24 h-2 my-2 bg-cyan-700">
+          <blockquote class="font-bold text-lg">
+            Continuos Learning is the key of solving problem in life and code as well.. 😊
+          </blockquote>
+        </div>
 
-          <div class="p-4 md:p-12 text-center lg:text-left">
-            <!-- Image for mobile view-->
-            <div class="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center"
-              style="background-image: url('./assets/Images/anime_boy.png')"></div>
-
-            <h1 class="text-3xl font-bold pt-8 lg:pt-0">Jayesh Shivaji Sutar</h1>
-            <p class="pt-4 text-base font-bold flex items-center justify-center lg:justify-start"><svg
-                class="h-4 fill-current text-blue-700 pr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <path
-                  d="M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9v-2zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9v2zm3-8V2H8v1h4z" />
-              </svg>
-              Software Developer</p>
-            <p class="pt-2 text-gray-600 text-xs lg:text-sm flex items-center justify-center lg:justify-start"><svg
-                class="h-4 fill-current text-blue-700 pr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <path
-                  d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm7.75-8a8.01 8.01 0 0 0 0-4h-3.82a28.81 28.81 0 0 1 0 4h3.82zm-.82 2h-3.22a14.44 14.44 0 0 1-.95 3.51A8.03 8.03 0 0 0 16.93 14zm-8.85-2h3.84a24.61 24.61 0 0 0 0-4H8.08a24.61 24.61 0 0 0 0 4zm.25 2c.41 2.4 1.13 4 1.67 4s1.26-1.6 1.67-4H8.33zm-6.08-2h3.82a28.81 28.81 0 0 1 0-4H2.25a8.01 8.01 0 0 0 0 4zm.82 2a8.03 8.03 0 0 0 4.17 3.51c-.42-.96-.74-2.16-.95-3.51H3.07zm13.86-8a8.03 8.03 0 0 0-4.17-3.51c.42.96.74 2.16.95 3.51h3.22zm-8.6 0h3.34c-.41-2.4-1.13-4-1.67-4S8.74 3.6 8.33 6zM3.07 6h3.22c.2-1.35.53-2.55.95-3.51A8.03 8.03 0 0 0 3.07 6z" />
-              </svg>
-              Current Location - Pune, Maharashtra</p>
-            <p class="pt-8 text-sm"> Completed Post Graduation and having an 1 year complete experience in Full-Stack
-              Software development.</p>
-
-            <div class="pt-12 pb-8">
-              <button class="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full mx-2">
-                <a href="https://drive.google.com/file/d/1pOsNoyJW7x8sgNcmgZjo1k15DrQDu7rC/view?usp=sharing" target="_blank"> Get In Touch </a>
-              </button>
-              <a href="#Project">
-                <button class="bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full mx-2">
-                  My projects
-                </button>
-              </a>
-            </div>
-
-            <div class="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-start gap-5">
-              <a class=" flex" href="https://www.linkedin.com/in/jayesh2124" target="_blank">
-                <svg fill="blue" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0"
-                  class="h-10 fill-current text-gray-600 hover:text-green-700" viewBox="0 0 24 24">
-                  <path stroke="none"
-                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-                  <circle cx="4" cy="4" r="2" stroke="none"></circle>
-                </svg>
-              </a>
-
-              <!-- <a class="link" href="#" data-tippy-content="@twitter_handle"><svg class="h-6 fill-current text-gray-600 hover:text-green-700" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg></a> -->
-              <a class="link" href="#" data-tippy-content="@github_handle"><svg
-                  class="h-10 fill-current text-gray-600 hover:text-green-700" role="img" viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <title>GitHub</title>
-                  <path
-                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                </svg></a>
-              <!-- <a class="link" href="#" data-tippy-content="@unsplash_handle"><svg class="h-6 fill-current text-gray-600 hover:text-green-700" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Unsplash</title><path d="M7.5 6.75V0h9v6.75h-9zm9 3.75H24V24H0V10.5h7.5v6.75h9V10.5z"/></svg></a> -->
-              <!-- <a class="link" href="#" data-tippy-content="@dribble_handle"><svg class="h-6 fill-current text-gray-600 hover:text-green-700" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Dribbble</title><path d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.814zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z"/></svg></a> -->
-              <!-- <a class="link" href="#" data-tippy-content="@instagram_handle"><svg class="h-6 fill-current text-gray-600 hover:text-green-700" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg></a> -->
-              <!-- <a class="link" href="#" data-tippy-content="@youtube_handle"><svg class="h-6 fill-current text-gray-600 hover:text-green-700" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>YouTube</title><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a> -->
-            </div>
-
-            <!-- Use https://simpleicons.org/ to find the svg for your preferred product -->
-
+        <div class="row flex flex-col md:flex-row">
+          <div class="col-lg-4 aos-init aos-animate" data-aos="fade-right">
+            <img src="../assets/Images/Profile-bg.png" class="max-w-full h-auto" alt="">
           </div>
-
-        </div>
-
-        <!--Img Col-->
-        <div class="w-full lg:w-2/5">
-          <!-- Big profile image for side bar (desktop) -->
-          <img src="./assets/Images/anime_boy.png" class="rounded-none lg:rounded-lg hidden lg:block">
-          <!-- Image from: http://unsplash.com/photos/MP0IUfwrn0A -->
-
-        </div>
-
-
-        <!-- Pin to top right corner -->
-        <div class="absolute top-0 right-0 h-12 w-18 p-4">
-          <button class="js-change-theme focus:outline-none">🌙</button>
-        </div>
-
-      </div>
-
-    </main>
-  </div>
-
-
-  <!-- About Section  -->
-  <section id="About"
-    class="edu-nsw text-xl max-w mx-auto px-5 justify-center rounded-xl bg-gradient-to-r from-blue-100 to-cyan-200">
-
-    <!-- Project TailBlock section -->
-    <section class="text-gray-600 body-font overflow-hidden">
-
-      <div class="container px-5 py-24 mx-auto">
-        <div class="lg:w-4/5 mx-auto flex flex-wrap">
-          <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-contain rounded"
-            src="./assets/Images/Profile-bg.png" />
-          <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0 flex flex-col justify-center">
-            <h2 class="text-sm title-font text-gray-500 tracking-widest">Full stack Developer</h2>
-            <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">
-              Jayesh Sutar
-            </h1>
-            <!-- <div class="flex mb-4">
-          <span class="flex items-center">
-            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-              stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
-              </path>
-            </svg>
-            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-              stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
-              </path>
-            </svg>
-            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-              stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
-              </path>
-            </svg>
-            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-              stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
-              </path>
-            </svg>
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
-              </path>
-            </svg>
-            <span class="text-gray-600 ml-3">4 Reviews</span>
-          </span>
-          <span class="flex ml-3 pl-3 py-2 border-l-2 border-gray-200 space-x-2s">
-            <a class="text-gray-500">
-              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
-                viewBox="0 0 24 24">
-                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-              </svg>
-            </a>
-            <a class="text-gray-500">
-              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
-                viewBox="0 0 24 24">
-                <path
-                  d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
-                </path>
-              </svg>
-            </a>
-            <a class="text-gray-500">
-              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
-                viewBox="0 0 24 24">
-                <path
-                  d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
-                </path>
-              </svg>
-            </a>
-          </span>
-        </div> -->
-            <p class="leading-relaxed">
-              I am a FullStack Developer in <span class="font-bold">Angular with dot Net as Backend API and SQL
-                Database.</span>
-              Currently i am having an Experience in developing Application using Angular and strong knowledge in SQL
-              for generating reports based on the data since <span class="font-bold"> Jun 2023 </span>
-              I worked for Two project which are guided by the <span class="font-bold">EY's Treasury Consultant's</span>
-              for developing the automation tool for their treasury client.
+          <div class="col-lg-8 pt-4 pt-lg-0 content aos-init aos-animate" data-aos="fade-left">
+            <p class="text-4xl text-[#173b6c] pacifico-regular  salsa-regular  font-bold"> Full Stack Developer </p>
+            <p class="">
+              Myself Jayesh Shivaji Sutar, I completed my post graduation in computer application <br>
+              from North Maharashtra University. I am intrusted in developing full stack application <br>
+              passionate about learning and coding. Internship period gives me experience of finding issues <br>
+              and understanding the flow of code to concur problem and understand concepts to come up with solutions.
+              <br>
+              some general information is given below.
             </p>
-            <p class="text-lg font-semibold">
-              <!-- To know more about me in details please <a class="text-violet-500 underline" href="#">Click here</a> -->
-            </p>
-            <div class="flex flex-col items-center ">
-              <div class="mt-8 mb-8 flex gap-4 md:gap-8 items-center justify-center md:justify-start">
-                <div class="flex space-x-3">
-                  <div class="flex">
-                    <a>
-                      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48"
-                        class="cursor-pointer">
-                        <path fill="#bdbdbd" d="M23.933 2L3 9.285 6.308 36.408 23.955 46 41.693 36.278 45 9.156z">
-                        </path>
-                        <path fill="#b71c1c" d="M42.818 10.527L24 4.135 24 43.695 39.832 35.017z"></path>
-                        <path fill="#dd2c00"
-                          d="M23.941 4.115L5.181 10.644 8.168 35.143 23.951 43.721 24 43.695 24 4.135z">
-                        </path>
-                        <path fill="#bdbdbd" d="M24 5.996L24 15.504 32.578 34 36.987 34z"></path>
-                        <path fill="#eee" d="M11.013 34L15.422 34 24 15.504 24 5.996z"></path>
-                        <path fill="#bdbdbd" d="M24 24H30V28H24z"></path>
-                        <path fill="#eee" d="M18 24H24V28H18z"></path>
-                      </svg>
-                    </a>
-                  </div>
-                  <div class="flex">
-                    <a>
-                      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
-                        viewBox="0 0 48 48 " class="cursor-pointer">
-                        <rect width="36" height="36" x="6" y="6" fill="#1976d2"></rect>
-                        <polygon fill="#fff"
-                          points="27.49,22 14.227,22 14.227,25.264 18.984,25.264 18.984,40 22.753,40 22.753,25.264 27.49,25.264">
-                        </polygon>
-                        <path fill="#fff"
-                          d="M39.194,26.084c0,0-1.787-1.192-3.807-1.192s-2.747,0.96-2.747,1.986 c0,2.648,7.381,2.383,7.381,7.712c0,8.209-11.254,4.568-11.254,4.568V35.22c0,0,2.152,1.622,4.733,1.622s2.483-1.688,2.483-1.92 c0-2.449-7.315-2.449-7.315-7.878c0-7.381,10.658-4.469,10.658-4.469L39.194,26.084z">
-                        </path>
-                      </svg>
-                    </a>
-                  </div>
-                  <div class="flex">
-                    <a>
-                      <img src="./assets/Images/js.png" alt="" class="cursor-pointer w-12 h-12 ">
-                    </a>
-                  </div>
-                  <div class="flex">
-                    <a>
-                      <img src="./assets/Images/c-sharp.png" alt="" class="cursor-pointer w-12 h-12 ">
-                    </a>
-                  </div>
-                  <div class="flex">
-                    <a>
-                      <img src="./assets/Images/sql-server.png" alt="" class="cursor-pointer w-12 h-12 ">
-                    </a>
-                  </div>
-                  <div class="flex">
-                    <a>
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
-                        tooltip="TailWind Css" alt="Tailwind Css" class="cursor-pointer w-12 h-12 ">
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="flex flex-row gap-5 justify-center items-center my-5">
-             <a href="https://drive.google.com/file/d/1pOsNoyJW7x8sgNcmgZjo1k15DrQDu7rC/view?usp=sharing" target="_blank" class="bg-cyan-800 text-slate-50 w-1/3 h-auto rounded-full p-3 hover:shadow-2xl hover:shadow-gray-50">
-              <button
-              class="">
-              Download CV 
-            </button>
-             </a>
-              <a href="#ContactUs"class="bg-slate-600 text-slate-50 w-1/3 h-auto rounded-full p-3 hover:shadow-2xl hover:shadow-gray-50">
-                <button class=" " > Contact Me </button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </section>
 
+            <div class="flex flex-col gap-6 sm:flex-row my-5">
+              <div class="col-lg-6 flex gap-4">
+                <ul>
 
-
-
-
-  <!-- Main Project Section -->
-
-  <!-- Project Section  -->
-  <section id="Project" class="max-w-full mx-auto px-5 my-6 justify-center rounded-xl">
-    <div class="text-center items-center p-3 text-2xl font-bold hover:font-extrabold hover:tracking-[2.22px]">
-      <p>I Have Worked On</p>
-    </div>
-    <div class="justify-center grid grid-cols-1 gap-4 ">
-
-      <!-- Zydus Project -->
-      <section class="text-gray-600 body-font overflow-hidden flex flex-row justify-center">
-        <div class="mt-3 flex items-center  md:flex-row md:flex-nowrap flex-wrap flex-col gap-5">
-          <div class=" mx-3 card max-h-4xls max-w-full rounded-3xl shadow-2xl bg-slate-200 ">
-            <div class="card-body ">
-              <div class="columns-2 flex flex-col lg:flex-row ">
-                <div class="max-w-2xl">
-                  <img src="./assets/Images/Zydus.png" class="object-contain  rounded-2xl  h-full min-h-fit ">
-                </div>
-                <div class=" p-2 m-1">
-                  <h1 class="edu-nsw"> Zydus - Cash, Debt, Forex, Investment </h1>
-                  <p> Feb-2024 - Under Development </p>
-                  <div class="flex space-x-3 justify-center">
-                    <div class="flex">
-                      <a>
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
-                          viewBox="0 0 48 48" class="cursor-pointer">
-                          <path fill="#bdbdbd" d="M23.933 2L3 9.285 6.308 36.408 23.955 46 41.693 36.278 45 9.156z">
-                          </path>
-                          <path fill="#b71c1c" d="M42.818 10.527L24 4.135 24 43.695 39.832 35.017z"></path>
-                          <path fill="#dd2c00"
-                            d="M23.941 4.115L5.181 10.644 8.168 35.143 23.951 43.721 24 43.695 24 4.135z">
-                          </path>
-                          <path fill="#bdbdbd" d="M24 5.996L24 15.504 32.578 34 36.987 34z"></path>
-                          <path fill="#eee" d="M11.013 34L15.422 34 24 15.504 24 5.996z"></path>
-                          <path fill="#bdbdbd" d="M24 24H30V28H24z"></path>
-                          <path fill="#eee" d="M18 24H24V28H18z"></path>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="flex">
-                      <a>
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
-                          viewBox="0 0 48 48 " class="cursor-pointer">
-                          <rect width="36" height="36" x="6" y="6" fill="#1976d2"></rect>
-                          <polygon fill="#fff"
-                            points="27.49,22 14.227,22 14.227,25.264 18.984,25.264 18.984,40 22.753,40 22.753,25.264 27.49,25.264">
-                          </polygon>
-                          <path fill="#fff"
-                            d="M39.194,26.084c0,0-1.787-1.192-3.807-1.192s-2.747,0.96-2.747,1.986 c0,2.648,7.381,2.383,7.381,7.712c0,8.209-11.254,4.568-11.254,4.568V35.22c0,0,2.152,1.622,4.733,1.622s2.483-1.688,2.483-1.92 c0-2.449-7.315-2.449-7.315-7.878c0-7.381,10.658-4.469,10.658-4.469L39.194,26.084z">
-                          </path>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="flex">
-                      <a>
-                        <img src="./assets/Images/js.png" alt="" class="cursor-pointer w-6 h-6 ">
-                      </a>
-                    </div>
-                    <div class="flex">
-                      <a>
-                        <img src="./assets/Images/c-sharp.png" alt="" class="cursor-pointer w-6 h-6 ">
-                      </a>
-                    </div>
-                    <div class="flex">
-                      <a>
-                        <img src="./assets/Images/sql-server.png" alt="" class="cursor-pointer w-6 h-6 ">
-                      </a>
-                    </div>
-                    <!-- <div class="flex">
-                        <a>
-                          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
-                            tooltip="TailWind Css" alt="Tailwind Css" class="cursor-pointer w-6 h-6 ">
-                        </a>
-                      </div> -->
-                  </div>
-                  <article class="text-wrap my-3 px-3s">
-                    <p> Zydus - Cash, Debt, Forex, Investment" refers to a comprehensive financial management <br>
-                      system designed specifically for Zydus Group, <br>
-                      a leading pharmaceutical company. This web application is dedicated to efficiently <br>
-                      managing various financial aspects such as cash management, debt tracking, foreign exchange <br>
-                      (forex) transactions, and investment portfolios.</p>
-                  </article>
-
-                  <div class="w-full py-2 px-4">
-                    <span class="w-full h-12 flex justify-end text-end">
-                      <p class="py-6 px-3">Project Client and Guidance by </p>
-                      <img src="./assets/Images/EY_logo.png" alt="" />
-                    </span>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-      <!-- For APAR -->
-      <section class="text-gray-600 body-font overflow-hidden flex flex-row justify-center">
-        <div class="mt-3 flex items-center  md:flex-row md:flex-nowrap flex-wrap flex-col gap-5">
-          <div class=" mx-3 card max-h-4xls max-w-full rounded-3xl shadow-2xl bg-slate-200 ">
-            <div class="card-body ">
-              <div class="columns-2 flex flex-col lg:flex-row ">
-                <div class="max-w-2xl">
-                  <img src="./assets/Images/Screenshot 2024-01-30 173202.png"
-                    class="object-contain  rounded-2xl  h-full min-h-fit ">
-                </div>
-                <div class=" p-2 m-1">
-                  <h1 class="edu-nsw"> APAR Digi-Treasury </h1>
-                  <p> Actual start :- Oct-2023 - Jan-2024 </p>
-                  <p> My work starts from : Feb-2023 </p>
-                  <div class=" items-center ">
-                    View Project : <br>
-                    for the confidential purpose link is not available, for looking this project please contact me. 
-
-
-                    <!-- <a href="https://aparuatweb.azurewebsites.net/" target="_blank"
-                      class="text-blue-500 underline"> APAR UAT
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                          d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                      </svg>
-                    </a> -->
-                    <!-- <label for="">
-                      ID: cable@apar.com <br>
-                      Password : Password12
-                    </label> -->
-                  </div>
-                  <br>
-                  <div class="flex space-x-3 justify-center">
-                    <div class="flex">
-                      <a>
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
-                          viewBox="0 0 48 48" class="cursor-pointer">
-                          <path fill="#bdbdbd" d="M23.933 2L3 9.285 6.308 36.408 23.955 46 41.693 36.278 45 9.156z">
-                          </path>
-                          <path fill="#b71c1c" d="M42.818 10.527L24 4.135 24 43.695 39.832 35.017z"></path>
-                          <path fill="#dd2c00"
-                            d="M23.941 4.115L5.181 10.644 8.168 35.143 23.951 43.721 24 43.695 24 4.135z">
-                          </path>
-                          <path fill="#bdbdbd" d="M24 5.996L24 15.504 32.578 34 36.987 34z"></path>
-                          <path fill="#eee" d="M11.013 34L15.422 34 24 15.504 24 5.996z"></path>
-                          <path fill="#bdbdbd" d="M24 24H30V28H24z"></path>
-                          <path fill="#eee" d="M18 24H24V28H18z"></path>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="flex">
-                      <a>
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
-                          viewBox="0 0 48 48 " class="cursor-pointer">
-                          <rect width="36" height="36" x="6" y="6" fill="#1976d2"></rect>
-                          <polygon fill="#fff"
-                            points="27.49,22 14.227,22 14.227,25.264 18.984,25.264 18.984,40 22.753,40 22.753,25.264 27.49,25.264">
-                          </polygon>
-                          <path fill="#fff"
-                            d="M39.194,26.084c0,0-1.787-1.192-3.807-1.192s-2.747,0.96-2.747,1.986 c0,2.648,7.381,2.383,7.381,7.712c0,8.209-11.254,4.568-11.254,4.568V35.22c0,0,2.152,1.622,4.733,1.622s2.483-1.688,2.483-1.92 c0-2.449-7.315-2.449-7.315-7.878c0-7.381,10.658-4.469,10.658-4.469L39.194,26.084z">
-                          </path>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="flex">
-                      <a>
-                        <img src="./assets/Images/js.png" alt="" class="cursor-pointer w-6 h-6 ">
-                      </a>
-                    </div>
-                    <div class="flex">
-                      <a>
-                        <img src="./assets/Images/c-sharp.png" alt="" class="cursor-pointer w-6 h-6 ">
-                      </a>
-                    </div>
-                    <div class="flex">
-                      <a>
-                        <img src="./assets/Images/sql-server.png" alt="" class="cursor-pointer w-6 h-6 ">
-                      </a>
-                    </div>
-                    <!-- <div class="flex">
-                  <a>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
-                      tooltip="TailWind Css" alt="Tailwind Css" class="cursor-pointer w-6 h-6 ">
-                  </a>
-                </div> -->
-                  </div>
-                  <article class="text-wrap my-3 px-3s">
-                    <p>The "APAR Industries - Accounting and Hedging Automation" portfolio <br>
-                      is a transformation solution designed specifically for the <br>
-                      treasury department of APAR Industries. <br>
-                      It revolutionizes the management of commodities and currency hedging <br>
-                      while providing robust reporting capabilities for informed decision-making. <br>
-                      Incorporating advanced automation technology, this portfolio replaces the manual <br>
-                      processes previously managed through Excel spreadsheets. <br>
-                      By centralizing data and automating tasks, it enhances efficiency and accuracy, <br>
-                      empowering users to generate comprehensive reports effortlessly.s
-                    </p>
-
-                  </article>
-
-                  <div class="w-full py-2 px-4">
-                    <span class="w-full h-12 flex justify-end text-end">
-                      <p class="py-6 px-3">Project Client and Guidance by </p>
-                      <img src="./assets/Images/EY_logo.png" alt="" />
-                    </span>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- For PortFolio -->
-      <section class="text-gray-600 body-font overflow-hidden flex flex-row justify-center">
-        <div class="mt-3 flex items-center  md:flex-row md:flex-nowrap flex-wrap flex-col gap-5">
-          <div class=" mx-3 card max-h-4xls max-w-full rounded-3xl shadow-2xl bg-slate-200 ">
-            <div class="card-body ">
-              <div class="columns-2 flex flex-col lg:flex-row ">
-                <div class="max-w-2xl">
-                  <img src="./assets/Images/Porfolio_Home.png" class="object-contain  rounded-2xl  h-full min-h-fit ">
-                </div>
-                <div class=" p-2 m-1">
-                  <h1 class="edu-nsw"> Personal PortFolio</h1>
-
-                  <div class="flex flex-row items-center">
-                    View Code from Here : <a class="link mx-2" href="https://github.com/Jayesh2124/PortFolio"
-                      data-tippy-content="@github_handle" target="_blank">
-                      <svg class="h-8 fill-current text-gray-600 hover:text-green-700" role="img" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <title>GitHub</title>
-                        <path
-                          d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                      </svg>
-                    </a>
-                  </div>
-
-                  <div class="flex space-x-3 justify-center">
-                    <div class="flex">
-                      <a>
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
-                          viewBox="0 0 48 48" class="cursor-pointer">
-                          <path fill="#bdbdbd" d="M23.933 2L3 9.285 6.308 36.408 23.955 46 41.693 36.278 45 9.156z">
-                          </path>
-                          <path fill="#b71c1c" d="M42.818 10.527L24 4.135 24 43.695 39.832 35.017z"></path>
-                          <path fill="#dd2c00"
-                            d="M23.941 4.115L5.181 10.644 8.168 35.143 23.951 43.721 24 43.695 24 4.135z">
-                          </path>
-                          <path fill="#bdbdbd" d="M24 5.996L24 15.504 32.578 34 36.987 34z"></path>
-                          <path fill="#eee" d="M11.013 34L15.422 34 24 15.504 24 5.996z"></path>
-                          <path fill="#bdbdbd" d="M24 24H30V28H24z"></path>
-                          <path fill="#eee" d="M18 24H24V28H18z"></path>
-                        </svg>
-                      </a>
-                    </div>
-
-                    <div class="flex">
-                      <a>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
-                          alt="tailwind" title="tailwind Css" class="cursor-pointer w-6 h-6 ">
-                      </a>
-                    </div>
-                    <!-- <div class="flex">
-                  <a>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
-                      tooltip="TailWind Css" alt="Tailwind Css" class="cursor-pointer w-6 h-6 ">
-                  </a>
-                </div> -->
-                  </div>
-                  <article class="text-wrap my-3 px-3s items-center">
-                    <p>
-                      It is just a practical purpose designed by self and created portfolio using <br> Angular and
-                      Tailwind Css.
-                      this is for the demonstration of my skills and the project which ever i worked upto now. <br>
-                      Here are some key components to include in your personal portfolio:
-                    </p>
-                    <ul class="list-none">
-                      <li><b> My Introduction</b> </li>
-                      <li><b> About Me </b></li>
-                      <li><b> Skills </b></li>
-                      <li><b> My Projects </b></li>
-                      <li><b> Work Experience and Education </b></li>
-                      <li><b> Contact Information & Testimonials </b></li>
-                    </ul>
-
-                  </article>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- For MEAN Stack Login System -->
-      <section class="text-gray-600 body-font overflow-hidden flex flex-row justify-center">
-        <div class="mt-3 flex items-center  md:flex-row md:flex-nowrap flex-wrap flex-col gap-5">
-          <div class=" mx-3 card max-h-4xls max-w-full rounded-3xl shadow-2xl bg-slate-200 ">
-            <div class="card-body ">
-              <div class="columns-2 flex flex-col lg:flex-row ">
-                <div class="max-w-2xl">
-                  <!-- <img src="../assets/Images/Porfolio_Home.png" class="object-contain  rounded-2xl  h-full min-h-fit "> -->
-                </div>
-                <div class=" p-2 m-1">
-                  <h1 class="edu-nsw"> Authentication And Authorization Login System Module </h1>
-
-                  <div class="flex flex-row items-center ">
-                    View Code from Here (MEAN Stack): <a class="link mx-2" href="https://github.com/Jayesh2124/javascript_backend"
-                      data-tippy-content="@github_handle" target="_blank">
-                      <svg class="h-8 fill-current text-gray-600 hover:text-green-700" role="img" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <title>GitHub</title>
-                        <path
-                          d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                      </svg>
-                    </a>
-
-                    View Code from Here (Angular and C# Stack): <a class="link mx-2" href="https://github.com/Jayesh2124/CSharp_API_Structure"
-                      data-tippy-content="@github_handle" target="_blank">
-                      <svg class="h-8 fill-current text-gray-600 hover:text-green-700" role="img" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <title>GitHub</title>
-                        <path
-                          d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                      </svg>
-                    </a>
-                  </div>
-
-                  <div class="flex space-x-3 justify-center mt-4">
-                    <div class="flex">
-                      <img src="https://img.icons8.com/?size=48&id=74402&format=png"  alt="MongoDB" title="MongoDB" class="cursor-pointer w-10 h-10 ">
-                    </div>
-                    <div class="flex">
-                      <img src="https://img.icons8.com/?size=50&id=kg46nzoJrmTR&format=png"  alt="Express Js" title="Express Js" class="cursor-pointer w-10 h-10 ">
-                    </div>
-                    <div class="flex">
-                      <a>
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                          viewBox="0 0 48 48" class="cursor-pointer w-10 h-10">
-                          <path fill="#bdbdbd" d="M23.933 2L3 9.285 6.308 36.408 23.955 46 41.693 36.278 45 9.156z">
-                          </path>
-                          <path fill="#b71c1c" d="M42.818 10.527L24 4.135 24 43.695 39.832 35.017z"></path>
-                          <path fill="#dd2c00"
-                            d="M23.941 4.115L5.181 10.644 8.168 35.143 23.951 43.721 24 43.695 24 4.135z">
-                          </path>
-                          <path fill="#bdbdbd" d="M24 5.996L24 15.504 32.578 34 36.987 34z"></path>
-                          <path fill="#eee" d="M11.013 34L15.422 34 24 15.504 24 5.996z"></path>
-                          <path fill="#bdbdbd" d="M24 24H30V28H24z"></path>
-                          <path fill="#eee" d="M18 24H24V28H18z"></path>
-                        </svg>
-                      </a>
-                    </div>
-                    
-                    <div class="flex">
-                      <a>
-                        <img src="https://img.icons8.com/?size=48&id=54087&format=png"
-                          tooltip="TailWind Css" alt="Tailwind Css" class="cursor-pointer w-10 h-10 ">
-                      </a>
-                    </div>
-                    <div class="flex">
-                      <a>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
-                          alt="tailwind" title="tailwind Css" class="cursor-pointer w-10 h-10 ">
-                      </a>
-                    </div>
-                  </div>
-                  <article class="text-wrap my-3 px-3s items-center">
-                    <p>
-                      It is just a practical purpose designed by self and created portfolio using <br> Angular and
-                      Tailwind Css.
-                      this is for the demonstration of my skills and the project which ever i worked upto now. <br>
-                      Here are some key components to include in your personal portfolio:
-                    </p>
-                    <ul class="list-none">
-                      <li><b> My Introduction</b> </li>
-                      <li><b> About Me </b></li>
-                      <li><b> Skills </b></li>
-                      <li><b> My Projects </b></li>
-                      <li><b> Work Experience and Education </b></li>
-                      <li><b> Contact Information & Testimonials </b></li>
-                    </ul>
-
-                  </article>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-
-    </div>
-
-  </section>
-
-  <!-- Technical Skills Section -->
-  <section class="max-w mx-auto px-5 my-6 justify-center bg-gradient-to-r from-blue-100 to-cyan-200">
-    <div class=" items-center p-3 text-2xl font-bold ">
-      <p class="hover:font-extrabold hover:tracking-[2.22px]">Technical Skills </p>
-      <span class="text-xl text-slate-700">Making apps with modern technologies
-        Never miss a task, deadline or idea</span>
-    </div>
-    <div class=" flex flex-col md:flex-row justify-center max-w-full mt-4 ">
-      <div class="card min-w-fit md:w-1/3  h-12 m-3 ">
-        <!-- HTML 5 -->
-        <div class="rounded-full flex flex-row items-center">
-          <a>
-            <img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="60" height="60"
-              alt="HTML5 Powered" title="HTML5 Powered">
-          </a>
-          <div class="w-full bg-orange-200 rounded-full h-2.5  mx-3">
-            <div class="bg-orange-600 h-2.5 rounded-full" style="width: 96%"> </div>
-            90%
-          </div>
-        </div>
-      </div>
-      <!-- CSS 3 -->
-      <div class="card min-w-fit md:w-1/3  h-12 m-3">
-        <div class="rounded-full flex flex-row items-center">
-          <a>
-            <img src="https://cdn-icons-png.flaticon.com/128/732/732190.png" width="60" height="60" alt="CSS3"
-              title="CSS3">
-          </a>
-          <div class="w-full bg-blue-200 rounded-full h-2.5  mx-3">
-            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"> </div>
-            90%
-          </div>
-        </div>
-      </div>
-      <!-- JavaScript -->
-      <div class="card min-w-fit md:w-1/3  h-12 m-3">
-        <div class="rounded-full flex flex-row items-center">
-          <a>
-            <img src="./assets/Images/js.png" width="60" height="60" alt="CSS3" title="CSS3">
-          </a>
-          <div class="w-full bg-yellow-200 rounded-full h-2.5  mx-3">
-            <div class="bg-yellow-600 h-2.5 rounded-full" style="width: 92%"> </div>
-            92%
-          </div>
-        </div>
-      </div>
-      <!-- TypeScript -->
-      <div class="card min-w-fit md:w-1/3  h-12 m-3">
-        <div class="rounded-full flex flex-row items-center">
-          <a>
-            <a>
-              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="60" height="60" viewBox="0 0 48 48 ">
-                <rect width="36" height="36" x="6" y="6" fill="#1976d2"></rect>
-                <polygon fill="#fff"
-                  points="27.49,22 14.227,22 14.227,25.264 18.984,25.264 18.984,40 22.753,40 22.753,25.264 27.49,25.264">
-                </polygon>
-                <path fill="#fff"
-                  d="M39.194,26.084c0,0-1.787-1.192-3.807-1.192s-2.747,0.96-2.747,1.986 c0,2.648,7.381,2.383,7.381,7.712c0,8.209-11.254,4.568-11.254,4.568V35.22c0,0,2.152,1.622,4.733,1.622s2.483-1.688,2.483-1.92 c0-2.449-7.315-2.449-7.315-7.878c0-7.381,10.658-4.469,10.658-4.469L39.194,26.084z">
-                </path>
-              </svg>
-            </a>
-          </a>
-          <div class="w-full bg-gray-200 rounded-full h-2.5  mx-3">
-            <div class="bg-cyan-600 h-2.5 rounded-full" style="width: 88%"> </div>
-            88%
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="flex flex-col md:flex-row justify-center max-w-full mt-4">
-      <!-- Angular -->
-      <div class="card min-w-fit md:w-1/3  h-12 m-3">
-        <div class="rounded-full flex flex-row items-center">
-          <a>
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="60" height="60" viewBox="0 0 48 48"
-              class="cursor-pointer">
-              <path fill="#bdbdbd" d="M23.933 2L3 9.285 6.308 36.408 23.955 46 41.693 36.278 45 9.156z">
-              </path>
-              <path fill="#b71c1c" d="M42.818 10.527L24 4.135 24 43.695 39.832 35.017z"></path>
-              <path fill="#dd2c00" d="M23.941 4.115L5.181 10.644 8.168 35.143 23.951 43.721 24 43.695 24 4.135z">
-              </path>
-              <path fill="#bdbdbd" d="M24 5.996L24 15.504 32.578 34 36.987 34z"></path>
-              <path fill="#eee" d="M11.013 34L15.422 34 24 15.504 24 5.996z"></path>
-              <path fill="#bdbdbd" d="M24 24H30V28H24z"></path>
-              <path fill="#eee" d="M18 24H24V28H18z"></path>
-            </svg>
-          </a>
-          <div class="w-full bg-red-200 rounded-full h-2.5  mx-3">
-            <div class="bg-red-600 h-2.5 rounded-full" style="width: 92%"> </div>
-            92%
-          </div>
-        </div>
-      </div>
-      <!-- C# -->
-      <div class="card min-w-fit md:w-1/3  h-12 m-3">
-        <div class="rounded-full flex flex-row items-center">
-          <img src="./assets/Images/c-sharp.png" width="60" height="60" alt="c-sharp" title="c-sharp">
-          <div class="w-full bg-purple-300 rounded-full h-2.5  mx-3">
-            <div class="bg-purple-600 h-2.5 rounded-full" style="width: 80%"> </div>
-            80%
-          </div>
-        </div>
-      </div>
-      <!-- SQL -->
-      <div class="card min-w-fit md:w-1/3  h-12 m-3">
-        <div class="rounded-full flex flex-row items-center">
-          <img src="./assets/Images/sql-server.png" width="60" height="60" alt="sql-server" title="sql-server">
-          <div class="w-full bg-yellow-300 rounded-full h-2.5  mx-3">
-            <div class="bg-yellow-600 h-2.5 rounded-full" style="width: 96%"> </div>
-            96%
-          </div>
-        </div>
-      </div>
-      <!-- MY SQL -->
-      <div class="card min-w-fit md:w-1/3  h-12 m-3">
-        <div class="rounded-full flex flex-row items-center">
-          <img src="https://cdn-icons-png.flaticon.com/128/919/919836.png" width="60" height="60" alt="my-sql"
-            title="my-sql">
-          <div class="w-full bg-gray-300 rounded-full h-2.5  mx-3">
-            <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-2.5 rounded-full" style="width: 88%"> </div>
-            88%
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="flex flex-col md:flex-row justify-center max-w-full mt-4">
-      <!-- Bootstrap -->
-      <div class="card min-w-fit md:w-1/3  h-12 m-3">
-        <div class="rounded-full flex flex-row items-center">
-          <img src="https://cdn-icons-png.flaticon.com/128/5968/5968672.png" width="60" height="60" alt="bootstrap"
-            title="bootstrap">
-          <div class="w-full bg-violet-300 rounded-full h-2.5  mx-3">
-            <div class="bg-gradient-to-r from-blue-600 to-violet-500 h-2.5 rounded-full" style="width: 88%"> </div>
-            88%
-          </div>
-        </div>
-      </div>
-      <!-- Tailwind Css -->
-      <div class="card min-w-fit md:w-1/3  h-12 m-3">
-        <div class="rounded-full flex flex-row items-center">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" width="60" height="60"
-            alt="tailwind" title="tailwind">
-          <div class="w-full bg-cyan-300 rounded-full h-2.5  mx-3">
-            <div class="bg-gradient-to-r from-cyan-500 to-cyan-600  h-2.5 rounded-full" style="width: 73%"> </div>
-            73%
-          </div>
-        </div>
-      </div>
-      <!-- NODE Js  -->
-      <div class="card min-w-fit md:w-1/3  h-12 m-3">
-        <div class="rounded-full flex flex-row items-center">
-          <img src="https://img.icons8.com/?size=48&id=54087&format=png" width="60" height="60" alt="nodejs"
-            title="nodejs">
-          <div class="w-full bg-gray-300 rounded-full h-2.5  mx-3">
-            <div class="bg-gradient-to-r from-green-300 to-green-600  h-2.5 rounded-full" style="width: 70%"> </div>
-            70%
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Section  -->
-  <section id="Experience" class="max-w mx-auto px-5 my-6 justify-center rounded-xl">
-    <div class="text-center items-center p-3 text-2xl font-bold hover:font-extrabold hover:tracking-[2.22px]">
-      <p>Education & Experience</p>
-    </div>
-    <section class="text-gray-600 body-font">
-      <div class="container px-5 py-24 mx-auto flex flex-wrap">
-        <div class="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto">
-          <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
-            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
-          </div>
-          <div
-            class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
-          </div>
-          <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-            <div
-              class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
-              <img src="https://rbistech.com/assets/imgs/rbislogo2.png" alt="" class="w-18 h-18 object-contain" />
-            </div>
-            <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-              <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">
-                Software Developer | RBIS Technology Private Limited
-              </h2>
-              <h2 class="font-medium text-gray-900 mb-1 text-xl">
-                Jun 2023 - Present
-              </h2>
-              <p class="leading-relaxed"> </p>
-            </div>
-          </div>
-        </div>
-        <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
-          <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
-            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
-          </div>
-          <div
-            class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
-          </div>
-          <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-            <div
-              class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
-              <img src="https://rbistech.com/assets/imgs/rbislogo2.png" alt="" class="w-18 h-18 object-contain" />
-            </div>
-            <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-              <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">
-                Software Developer Intern | RBIS Technology Private Limited
-              </h2>
-              <h2 class="font-medium text-gray-900 mb-1 text-xl">
-                Jan 2023 - Jun-2023
-              </h2>
-              <p class="leading-relaxed">
-                Selected from North Maharashtra University in onCampus placement Cell
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </section>
-
-
-
-  <!-- Testimonial Section  -->
-  <section class="text-gray-600 body-font bg-gradient-to-r from-blue-100 to-cyan-200">
-    <div class="container px-5 py-24 mx-auto">
-      <h1 class="cursor-default text-2xl font-medium title-font text-gray-900 mb-1 text-center ">
-        Testimonials
-      </h1>
-      <h1 class="cursor-default  text-4xl font-medium title-font text-gray-900 mb-16 text-center ">
-        What People Say about me
-      </h1>
-      <div class="flex flex-wrap -m-4">
-        <div class="p-4 md:w-1/2 w-full">
-          <div class="h-full bg-gray-100 p-8 rounded shadow-2xl">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-gray-400 mb-4"
-              viewBox="0 0 975.036 975.036">
-              <path
-                d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
-              </path>
-            </svg>
-            <p class="leading-relaxed mb-6">
-              Synth chartreuse iPhone lomo cray raw denim brunch everyday carry
-              neutra before they sold out fixie 90's microdosing. Tacos pinterest
-              fanny pack venmo, post-ironic heirloom try-hard pabst authentic
-              iceland.
-            </p>
-            <a class="inline-flex items-center">
-              <img alt="testimonial" src="https://dummyimage.com/106x106"
-                class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center" />
-              <span class="flex-grow flex flex-col pl-4">
-                <span class="title-font font-medium text-gray-900">Jeet shah</span>
-                <span class="text-gray-500 text-sm">Senior Analyst at EY</span>
-              </span>
-            </a>
-            <div class="w-full">
-              <span class="w-full h-12 flex justify-end text-end">
-                <img src="./assets/Images/EY_logo.png" alt="" />
-              </span>
-            </div>
-          </div>
-        </div>
-        <div class="p-4 md:w-1/2 w-full">
-          <div class="h-full bg-gray-100 p-8 rounded shadow-2xl">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-gray-400 mb-4"
-              viewBox="0 0 975.036 975.036">
-              <path
-                d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
-              </path>
-            </svg>
-            <p class="leading-relaxed mb-6">
-              Synth chartreuse iPhone lomo cray raw denim brunch everyday carry
-              neutra before they sold out fixie 90's microdosing. Tacos pinterest
-              fanny pack venmo, post-ironic heirloom try-hard pabst authentic
-              iceland.
-            </p>
-            <a class="inline-flex items-center">
-              <img alt="testimonial" src="https://dummyimage.com/107x107"
-                class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center" />
-              <span class="flex-grow flex flex-col pl-4">
-                <span class="title-font font-medium text-gray-900">Ritvik Nandawana</span>
-                <span class="text-gray-500 text-sm">Senior Consultant At EY</span>
-              </span>
-            </a>
-            <div class="w-full">
-              <span class="w-full h-12 flex justify-end text-end">
-                <img src="./assets/Images/EY_logo.png" alt="" />
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact US -->
-  <!-- 
-<div  id=ContactUs>
-  <div class="visme_d" data-title="Untitled Project" data-url="n08wqrx7-untitled-project" 
-  data-domain="forms" data-full-page="false" data-min-height="1000px" data-form-id="29680"></div>
-  
-</div> -->
-
-  <footer id=ContactUs class="">
-    <div class="text-gray-800 body-font ">
-      <div
-        class="container px-5 py-16 flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-        <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
-          <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-            <img class="w-28 h-28 text-white p-2 rounded-full" src="./assets/Logo.png" alt="" />
-            <span class="ml-3 text-xl">Jayesh Sutar</span>
-          </a>
-          <p class="mt-2 text-sm ">
-            Belive in yourself the best version of yourself is yet to come...!
-          </p>
-        </div>
-        <div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
-          <div class="lg:w-1/2 md:w-1/2 w-full px-4">
-            <h2 class="title-font font-medium text-black tracking-widest text-2xl mb-3">
-              Social
-            </h2>
-            <nav class="list-none mb-10">
-              <li class="my-2 flex justify-center md:justify-start">
-                <a class=" flex hover:cursor-pointer" href="https://github.com/Jayesh2124" target="_blank">
-                  <div class="w-10">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="w-8 h-8">
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                      class="h-5 mx-3 fill-current inline-flex text-slate-800 hover:text-blue-700 hover:shadow-lg hover:shadow-blue-500 "><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                       <path
-                        d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                        d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
                     </svg>
-                  </div>
-                  <div class="w-1/2 p-0 m-2">
-                    <p class="">
-                      <span class=" "> @Jayesh2124 </span>
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li class="my-2 flex justify-center md:justify-start">
-                <a class=" flex hover:cursor-pointer">
-                  <div class="w-10">
-                    <svg fill="none" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      class="w-10 h-10" viewBox="0 0 24 24">
-                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-                    </svg>
-                  </div>
-                  <div class="w-1/2 p-0 m-2">
-                    <p class="">
-                      <span class="text-black"> @Jays_Photart </span>
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li class="my-2 flex justify-center md:justify-start">
-                <a class=" flex" href="https://www.linkedin.com/in/jayesh2124" target="_blank">
-                  <div class="w-10">
-                    <svg fill="blue" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                      stroke-width="0" class="w-10 h-10" viewBox="0 0 24 24">
-                      <path stroke="none"
-                        d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-                      <circle cx="4" cy="4" r="2" stroke="none"></circle>
-                    </svg>
-                  </div>
-                  <div class="w-1/2 p-0 m-2">
-                    <p class="">
-                      <span class="text-black"> Jayesh_Sutar </span>
-                    </p>
-                  </div>
-                </a>
-              </li>
-            </nav>
-          </div>
+                    <strong class="mx-3">City:</strong>
+                    <span class="mx-3">Jalgaon, Maharashtra</span>
+                  </li>
 
-          <div class="lg:w-1/2 md:w-1/2 w-full px-4">
-            <h2 class="title-font font-medium text-gray-900 tracking-widest text-2xl mb-3">
-              Personal Information
-            </h2>
-            <nav class="list-none mb-10">
-              <li>
-                <a class="text-gray-900 font-bold hover:text-gray-800">Email : </a>
-                <a class=" hover:text-gray-800">Jayeshsutar1108@gmail.com </a>
-              </li>
-              <li>
-                <a class="text-gray-900 font-bold hover:text-gray-800"> Address : </a>
-                <a class=" hover:text-gray-800">Jalgaon </a>
-              </li>
-            </nav>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                      class="h-5 mx-3 fill-current inline-flex text-slate-800 hover:text-blue-700 hover:shadow-lg hover:shadow-blue-500 "><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                      <path
+                        d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+                    </svg>
+                    <strong class="mx-3">Phone:</strong>
+                    <span class="mx-3">+91 8552072777</span>
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                      class="h-5 mx-3 fill-current inline-flex text-slate-800 hover:text-blue-700 hover:shadow-lg hover:shadow-blue-500 "><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                      <path
+                        d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+                    </svg>
+                    <strong class="mx-3">GitHub Id : </strong>
+                    <span class="mx-3"> Jayesh2124 </span>
+                  </li>
+
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                      class="h-5 mx-3 fill-current inline-flex text-slate-800 hover:text-blue-700 hover:shadow-lg hover:shadow-blue-500 "><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                      <path
+                        d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+                    </svg>
+                    <strong class="mx-3">Degree:</strong>
+                    <span class="mx-3">Master Of Computer Application</span>
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                      class="h-5 mx-3 fill-current inline-flex text-slate-800 hover:text-blue-700 hover:shadow-lg hover:shadow-blue-500 "><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                      <path
+                        d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+                    </svg>
+                    <strong class="mx-3">Pass out:</strong>
+                    <span class="mx-3">2023 Batch</span>
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                      class="h-5 mx-3 fill-current inline-flex text-slate-800 hover:text-blue-700 hover:shadow-lg hover:shadow-blue-500 "><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                      <path
+                        d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+                    </svg>
+                    <strong class="mx-3">Email:</strong>
+                    <span class="mx-3">jayeshsutar1108@gmail.com</span>
+                  </li>
+
+
+                </ul>
+              </div>
+            </div>
+            <p>
+              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero.<br>
+              Quisquam sunt adipisci omnis et t. <br>
+              Nulla accusantium dolor incidunt officia tempore. Et eius omnis. <br>
+              Cupiditate ut dicta maxime officiis quidem quia. <br>
+              Sed et consectetur qui quia repellendus itaque neque. <br>
+              Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui <br>repellendus omnis culpa magni laudantium
+              dolores.
+            </p>
           </div>
         </div>
+
       </div>
-    </div>
-    <div class="flex bg-gradient-to-r from-blue-100 to-cyan-200 text-center justify-center">
-      <p> @Jayesh2124</p>
-    </div>
-  </footer>
+    </section>
+    <!-- End About Section -->
+
+    <!-- ======= Facts Section ======= -->
+    <section id="facts" class="facts">
+      <div class="container">
+
+        <div class="mt-[80px] px-5">
+          <p class="text-4xl salsa-regular  text-[#173b6c] font-bold">Facts</p>
+          <hr class="w-24 h-2 my-2 bg-cyan-700">
+          <!-- <blockquote class="font-bold text-lg">
+            Continuos Learning is the key of solving problem in life and code as well.. 😊
+          </blockquote> -->
+        </div>
+
+        <div class="flex flex-col gap-6 sm:flex-row my-5 text-center justify-center">
+         
+          <div class="card">
+            <div class="count-box flex flex-row gap-3 p-5">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="0" class="h-20 object-contain pt-2 fill-current text-blue-900 inline-flex">
+                <path
+                  d="M128 0C92.7 0 64 28.7 64 64V288H19.2C8.6 288 0 296.6 0 307.2C0 349.6 34.4 384 76.8 384H320V288H128V64H448V96h64V64c0-35.3-28.7-64-64-64H128zM512 128H400c-26.5 0-48 21.5-48 48V464c0 26.5 21.5 48 48 48H592c26.5 0 48-21.5 48-48V256H544c-17.7 0-32-14.3-32-32V128zm32 0v96h96l-96-96z" />
+              </svg>
+              <span class="text-2xl">15 +
+                <p><strong>Projects</strong> </p>
+              </span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="count-box flex flex-row gap-3 p-5">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" stroke="currentColor" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="0" class="h-20 object-contain pt-2 fill-current text-blue-900 inline-flex">
+               
+                  <path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 214.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432V346.1z"/></svg>
+              <span class="text-2xl"> 50 +
+                <p><strong>SQL Problem </strong> </p>
+              </span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="count-box flex flex-row gap-3 p-5">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" stroke="currentColor" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="0" class="h-20 object-contain pt-2 fill-current text-blue-900 inline-flex">
+                   <path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
+              <span class="text-2xl">100 +
+                <p><strong>Coding Questions </strong> </p>
+              </span>
+            </div>
+          </div>
+
+      
+
+        </div>
+
+      </div>
+    </section><!-- End Facts Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Skills</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+            in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row skills-content">
+
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up">
+
+            <div class="progress">
+              <span class="skill">HTML <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
+                  style="width: 100%;"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">CSS <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
+                  style="width: 90%;"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">JavaScript <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+                  style="width: 75%;"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="progress">
+              <span class="skill">PHP <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                  style="width: 80%;"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">WordPress/CMS <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
+                  style="width: 90%;"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Photoshop <i class="val">55%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"
+                  style="width: 55%;"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Resume</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+            in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up">
+            <h3 class="resume-title">Sumary</h3>
+            <div class="resume-item pb-0">
+              <h4>Alex Smith</h4>
+              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and
+                  developing user-centered digital/print marketing material from initial concept to final, polished
+                  deliverable.</em></p>
+              <ul>
+                <li>Portland par 127,Orlando, FL</li>
+                <li>(123) 456-7891</li>
+                <li>alice.barkley@example.com</li>
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Master of Fine Arts &amp; Graphic Design</h4>
+              <h5>2015 - 2016</h5>
+              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui
+                ut dignissimos deleniti nerada porti sand markend</p>
+            </div>
+            <div class="resume-item">
+              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
+              <h5>2010 - 2014</h5>
+              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius
+                unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart
+                dila</p>
+            </div>
+          </div>
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Senior graphic design specialist</h4>
+              <h5>2019 - Present</h5>
+              <p><em>Experion, New York, NY </em></p>
+              <ul>
+                <li>Lead in the design, development, and implementation of the graphic, layout, and production
+                  communication materials</li>
+                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the
+                  project. </li>
+                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the
+                  design</li>
+                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Graphic design specialist</h4>
+              <h5>2017 - 2018</h5>
+              <p><em>Stepping Stone Advertising, New York, NY</em></p>
+              <ul>
+                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and
+                  advertisements).</li>
+                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
+                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
+                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Resume Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+            in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row aos-init aos-animate" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app" class="">App</li>
+              <li data-filter=".filter-card" class="">Card</li>
+              <li data-filter=".filter-web" class="">Web</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
+          style="position: relative; height: 767.001px;">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 0px; top: 0px;">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web"
+            style="position: absolute; left: 324.894px; top: 0px;">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app"
+            style="position: absolute; left: 649.788px; top: 0px;">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card"
+            style="position: absolute; left: 0px; top: 255.667px;">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web"
+            style="position: absolute; left: 324.894px; top: 255.667px;">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app"
+            style="position: absolute; left: 649.788px; top: 255.667px;">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card"
+            style="position: absolute; left: 0px; top: 511.334px;">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card"
+            style="position: absolute; left: 324.894px; top: 511.334px;">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web"
+            style="position: absolute; left: 649.788px; top: 511.334px;">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+            in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 icon-box aos-init aos-animate" data-aos="fade-up">
+            <div class="icon"><i class="bi bi-briefcase"></i></div>
+            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+              occaecati cupiditate non provident</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bi bi-card-checklist"></i></div>
+            <h4 class="title"><a href="">Dolor Sitema</a></h4>
+            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat tarad limino ata</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="bi bi-bar-chart"></i></div>
+            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="bi bi-binoculars"></i></div>
+            <h4 class="title"><a href="">Magni Dolores</a></h4>
+            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon"><i class="bi bi-brightness-high"></i></div>
+            <h4 class="title"><a href="">Nemo Enim</a></h4>
+            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+              voluptatum deleniti atque</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box aos-init aos-animate" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon"><i class="bi bi-calendar4-week"></i></div>
+            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
+              soluta nobis est eligendi</p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Testimonials</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+            in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div
+          class="testimonials-slider swiper swiper-initialized swiper-horizontal swiper-backface-hidden aos-init aos-animate"
+          data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper" id="swiper-wrapper-9b11f1fa483d13b9" aria-live="off"
+            style="transition-duration: 0ms; transform: translate3d(-647.333px, 0px, 0px); transition-delay: 0ms;">
+
+            <!-- End testimonial item -->
+
+            <!-- End testimonial item -->
+
+            <!-- End testimonial item -->
+
+            <!-- End testimonial item -->
+
+            <!-- End testimonial item -->
+
+            <div class="swiper-slide" role="group" aria-label="4 / 5" style="width: 303.667px; margin-right: 20px;"
+              data-swiper-slide-index="3">
+              <div class="testimonial-item aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit
+                  minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-prev" role="group" aria-label="5 / 5"
+              style="width: 303.667px; margin-right: 20px;" data-swiper-slide-index="4">
+              <div class="testimonial-item aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa
+                  labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 5"
+              style="width: 303.667px; margin-right: 20px;" data-swiper-slide-index="0">
+              <div class="testimonial-item aos-init aos-animate" data-aos="fade-up">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium
+                  quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 5"
+              style="width: 303.667px; margin-right: 20px;" data-swiper-slide-index="1">
+              <div class="testimonial-item aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis
+                  quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+              </div>
+            </div>
+            <div class="swiper-slide" role="group" aria-label="3 / 5" style="width: 303.667px; margin-right: 20px;"
+              data-swiper-slide-index="2">
+              <div class="testimonial-item aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim
+                  tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+              </div>
+            </div>
+          </div>
+          <div
+            class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+            <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button"
+              aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0"
+              role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0"
+              role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0"
+              role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0"
+              role="button" aria-label="Go to slide 5"></span>
+          </div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+            in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row aos-init aos-animate" data-aos="fade-in">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>A108 Adam Street, New York, NY 535022</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>info@example.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+1 5589 55488 55s</p>
+              </div>
+
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+                frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen=""></iframe>
+            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" required="">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" required="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" required="">
+              </div>
+              <div class="form-group">
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" rows="10" required=""></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main>
+
 </div>

@@ -1,20 +1,63 @@
-.backImg{
-    background-image: url('../assets/Images/Profile_wave.svg');
-    background-position: center;
-    background-size:cover;
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    transition: all ease-in-out 0.5s;
+    z-index: 9997;
+    transition: all 0.5s;
+    padding: 0 15px;
+    background: #040b14;
+    overflow-y: auto;
 }
 
-.footerImg{
-    background-image: url('../assets/Images/wave.svg');
-    background-size:cover;
-    background-position: calc(100%);
+.nav {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
+#hero {
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    background: url("../assets/Images/back.jpg") no-repeat top right;
+    background-size: contain ;
+}
 
-.edu-nsw  {
-    font-family: "Edu NSW ACT Foundation", cursive;
-    font-weight: 900;
+#hero .hero-container {
+    position: relative;
+    z-index: 2;
+    min-width: 300px;
+}
+
+//  Google Fonts 
+.pacifico-regular {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.salsa-regular {
+    font-family: "Salsa", cursive;
+    font-weight: 400;
+    font-style: normal;
   }
+  
+// Ends of fonts
 
+section {
+    overflow: hidden;
+}
 
-
+.card{
+    background-color: white;
+    border-radius: 10px;
+    // border: 2px solid black;
+    box-shadow: 11px 19px 36px 0px rgba(0,0,0,0.65);
+    -webkit-box-shadow: 11px 19px 36px 0px rgba(0,0,0,0.65);
+    -moz-box-shadow: 11px 19px 36px 0px rgba(0,0,0,0.65);
+}
