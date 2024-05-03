@@ -12,6 +12,8 @@ import { ChildComponent } from './child/child.component'
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { NumericDirective } from './numeric.directive';
+import { SwiperModule } from 'swiper/types/shared';
+
 @NgModule({
   declarations: [
     AppComponent,
