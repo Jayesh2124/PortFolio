@@ -18,7 +18,20 @@ export class AppComponent  {
   @ViewChild('mobile_menu_button') menuBtn !:ElementRef;
   @ViewChild('mobile_menu') mobile_menu !:ElementRef;
 
+  @ViewChild('#Slider1') slider1 !: ElementRef<HTMLElement> ;
+  @ViewChild('#Slider2') slider2 !: ElementRef<HTMLElement> ;
+
   toggel(){
     this.mobile_menu.nativeElement.classList.toggle("hidden");
   }
+
+
+
+  sliderButton1()
+  {
+    debugger;
+    this.slider1.nativeElement.style.display = 'none'
+    this.slider2.nativeElement.style.display = 'block'
+  }
+
 }

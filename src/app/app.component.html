@@ -2,14 +2,15 @@
 <!-- Navigation Section -->
 <div>
 
-  <header id="header">
+  <header id="header" class=" items-center salsa-regular hidden sm:flex">
     <div class="flex flex-col">
       <!-- Profile View Section -->
-      <div class="profile m-3 rounded-3xl bg-gradient-to-b from-blue-800 via-purple-500 to-violet-800 ">
+      <div class="profile m-3 rounded-3xl bg-gradient-to-b from-gray-800  to-slate-500 ">
         <img src="../assets/Images/Profile-bg.png" alt=""
-          class="w-full h-auto rounded-full border-double border-4 border-sky-500">
-        <h1 class="text-2xl text-slate-50 text-center pt-2"> Jayesh Sutar </h1>
-        <div class="mt-3 text-center flex gap-5 flex-row justify-center ">
+          class="w-full h-auto rounded-full border-double border-4 border-sky-500 hidden lg:flex  ">
+        <h1 class="text-2xl text-slate-50 text-center  pt-2 salsa-regular hidden lg:block lg:ease-in-out  "> Jayesh
+          Sutar </h1>
+        <div class="mt-3 text-center  gap-5 flex-row hidden lg:flex  justify-center ">
           <a href="http://" target="_blank" rel="">
             <svg fill="blue" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0"
               class="h-8 fill-current text-slate-100 hover:text-blue-700 hover:shadow-lg hover:shadow-blue-500 "
@@ -36,63 +37,74 @@
           </a>
         </div>
 
-           <!-- Navigation bar from Here  -->
-    <nav id="navbar" class=" flex flex-col p-4 nav text-slate-50 rounded-3xl items-center justify-center"  >
-      <ul class="flex flex-col  gap-6 justify-center ">
-        <li><a href="#hero" class="nav-link scrollto active">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" stroke="currentColor" stroke-linecap="round"
-              stroke-linejoin="round" stroke-width="0" class="h-6 fill-current text-slate-100 inline-flex">
-              <path
-                d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
-            </svg>
-            <span class="text-xl mx-3 ">Home</span>
-          </a>
-        </li>
-        
-        <li><a href="#about" class="nav-link scrollto">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" stroke="currentColor" stroke-linecap="round"
-              stroke-linejoin="round" stroke-width="0" class="h-6 fill-current text-slate-100 inline-flex">
-              <path
-                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
-            </svg>
-            <span class="text-xl mx-4 ">About</span>
-          </a>
-        </li>
-        <li><a href="#resume" class="nav-link scrollto">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" stroke="currentColor" stroke-linecap="round"
-              stroke-linejoin="round" stroke-width="0" class="h-6 fill-current text-slate-100 inline-flex">
-              <path
-                d="M320 464c8.8 0 16-7.2 16-16V160H256c-17.7 0-32-14.3-32-32V48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H320zM0 64C0 28.7 28.7 0 64 0H229.5c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64z" />
-            </svg>
-            <span class="text-xl mx-4 ">Resume</span>
-          </a>
-        </li>
-        <li><a href="#portfolio" class="nav-link scrollto">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" stroke="currentColor" stroke-linecap="round"
-              stroke-linejoin="round" stroke-width="0" class="h-6 fill-current text-slate-100 inline-flex">
+        <!-- Navigation bar from Here  -->
+        <nav id="navbar" class=" flex flex-col p-4  nav text-slate-50 rounded-3xl items-center justify-center">
+          <ul class="flex flex-col  justify-center ">
+            <li class="hover:border-b-4 hover:border-blue-500 py-2 hover:animate-pulse hover:ease-in hover:transistion">
+              <a href="#hero" class="nav-link scrollto active">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" stroke="currentColor"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="0"
+                  class="h-6 fill-current text-slate-100 inline-flex">
+                  <path
+                    d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+                </svg>
+                <span class="text-xl mx-3 hidden lg:inline-flex">Home</span>
+              </a>
+            </li>
 
-              <path
-                d="M0 32C0 14.3 14.3 0 32 0H160c17.7 0 32 14.3 32 32V416c0 53-43 96-96 96s-96-43-96-96V32zM223.6 425.9c.3-3.3 .4-6.6 .4-9.9V154l75.4-75.4c12.5-12.5 32.8-12.5 45.3 0l90.5 90.5c12.5 12.5 12.5 32.8 0 45.3L223.6 425.9zM182.8 512l192-192H480c17.7 0 32 14.3 32 32V480c0 17.7-14.3 32-32 32H182.8zM128 64H64v64h64V64zM64 192v64h64V192H64zM96 440a24 24 0 1 0 0-48 24 24 0 1 0 0 48z" />
-            </svg>
-            <span class="text-xl mx-3 ">Portfolio</span>
-          </a>
-        </li>
-        <li><a href="#services" class="nav-link scrollto">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-              class="h-6 fill-current text-slate-100 inline-flex">
-              <path
-                d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V280.4c-17-15.2-39.4-24.4-64-24.4H64c-24.6 0-47 9.2-64 24.4V96zM64 288H448c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V352c0-35.3 28.7-64 64-64zM320 416a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm128-32a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z" />
-            </svg>
-            <span class="text-xl mx-3 ">Services</span>
-          </a>
-        </li>
+            <li
+              class="hover:border-b-4 hover:border-blue-500 py-2 hover:animate-pulse  hover:ease-in hover:transistion">
+              <a href="#about" class="nav-link scrollto active">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" stroke="currentColor"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="0"
+                  class="h-6 fill-current text-slate-100 inline-flex">
+                  <path
+                    d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+                </svg>
+                <span class="text-xl mx-4 hidden lg:inline-flex ">About</span>
+              </a>
+            </li>
+            <li
+              class="hover:border-b-4 hover:border-blue-500 py-2 hover:animate-pulse  hover:ease-in hover:transistion">
+              <a href="#resume" class="nav-link scrollto active">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" stroke="currentColor"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="0"
+                  class="h-6 fill-current text-slate-100 inline-flex">
+                  <path
+                    d="M320 464c8.8 0 16-7.2 16-16V160H256c-17.7 0-32-14.3-32-32V48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H320zM0 64C0 28.7 28.7 0 64 0H229.5c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64z" />
+                </svg>
+                <span class="text-xl mx-4 hidden lg:inline-flex">Resume</span>
+              </a>
+            </li>
+            <li class="hover:border-b-4 hover:border-blue-500 py-2 hover:animate-pulse hover:ease-in hover:transistion">
+              <a href="#portfolio" class="nav-link scrollto active">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" stroke="currentColor"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="0"
+                  class="h-6 fill-current text-slate-100 inline-flex">
 
-      </ul>
-    </nav>
+                  <path
+                    d="M0 32C0 14.3 14.3 0 32 0H160c17.7 0 32 14.3 32 32V416c0 53-43 96-96 96s-96-43-96-96V32zM223.6 425.9c.3-3.3 .4-6.6 .4-9.9V154l75.4-75.4c12.5-12.5 32.8-12.5 45.3 0l90.5 90.5c12.5 12.5 12.5 32.8 0 45.3L223.6 425.9zM182.8 512l192-192H480c17.7 0 32 14.3 32 32V480c0 17.7-14.3 32-32 32H182.8zM128 64H64v64h64V64zM64 192v64h64V192H64zM96 440a24 24 0 1 0 0-48 24 24 0 1 0 0 48z" />
+                </svg>
+                <span class="text-xl mx-3 hidden lg:inline-flex">Portfolio</span>
+              </a>
+            </li>
+            <li class="hover:border-b-4 hover:border-blue-500 py-2 hover:animate-pulse hover:ease-in hover:transistion">
+              <a href="#services" class="nav-link scrollto active">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                  class="h-6 fill-current text-slate-100 inline-flex">
+                  <path
+                    d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V280.4c-17-15.2-39.4-24.4-64-24.4H64c-24.6 0-47 9.2-64 24.4V96zM64 288H448c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V352c0-35.3 28.7-64 64-64zM320 416a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm128-32a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z" />
+                </svg>
+                <span class="text-xl mx-3 hidden lg:inline-flex">Services</span>
+              </a>
+            </li>
+
+          </ul>
+        </nav>
       </div>
     </div>
 
- 
+
   </header>
 
   <!-- Section Hero -->
@@ -105,7 +117,7 @@
   </section>
 
   <!-- Main section  -->
-  <main class="mx-auto md:ml-[300px] justify-center">
+  <main class="mx-auto md:ml-[100px] lg:ml-[300px] justify-center">
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
@@ -120,101 +132,86 @@
         </div>
 
         <div class="row flex flex-col md:flex-row">
-          <div class="col-lg-4 aos-init aos-animate" data-aos="fade-right">
+          <div class="col-lg-4 w-1/2 ">
             <img src="../assets/Images/Profile-bg.png" class="max-w-full h-auto" alt="">
           </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content aos-init aos-animate" data-aos="fade-left">
+          <div class="col-lg-8 pt-4 w-1/2 pt-lg-0 content ">
             <p class="text-4xl text-[#173b6c] pacifico-regular  salsa-regular  font-bold"> Full Stack Developer </p>
             <p class="">
-              Myself Jayesh Shivaji Sutar, I completed my post graduation in computer application <br>
-              from North Maharashtra University. I am intrusted in developing full stack application <br>
-              passionate about learning and coding. Internship period gives me experience of finding issues <br>
-              and understanding the flow of code to concur problem and understand concepts to come up with solutions.
-              <br>
+              Myself Jayesh Shivaji Sutar, a dedicated professional with a passion for both technology and the arts.
+              Holding a post-graduation degree in Master of Computer Applications (MCA) from the esteemed School of
+              Computer Science, North Maharashtra University, I have honed my skills and knowledge in the realm of
+              computer science and technology.
+
               some general information is given below.
             </p>
 
             <div class="flex flex-col gap-6 sm:flex-row my-5">
               <div class="col-lg-6 flex gap-4">
                 <ul>
-
-                  <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
-                      class="h-5 mx-3 fill-current inline-flex text-slate-800 hover:text-blue-700 hover:shadow-lg hover:shadow-blue-500 "><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                      <path
-                        d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
-                    </svg>
-                    <strong class="mx-3">City:</strong>
-                    <span class="mx-3">Jalgaon, Maharashtra</span>
+                  <li class="flex flex-row m-2">
+                    <img class="h-6"
+                      src="data:image/png;base64,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">
+                    <strong class="mx-2">City:</strong>
+                    <span class="mx-2">Jalgaon, Maharashtra</span>
                   </li>
-
-                  <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
-                      class="h-5 mx-3 fill-current inline-flex text-slate-800 hover:text-blue-700 hover:shadow-lg hover:shadow-blue-500 "><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                      <path
-                        d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
-                    </svg>
-                    <strong class="mx-3">Phone:</strong>
-                    <span class="mx-3">+91 8552072777</span>
+                  <li class="flex flex-row m-2">
+                    <img class="h-6"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAKL0lEQVR4nOWaaVAUZxrHn+7UVlK1la3d2k0yVg5vERFEQC41GGMiajQmbg5cc5loVEyCVyTGRMUocsgAgyM3MwxzMYAIDNeAgAjIfd/DMcyAyWY/7YetWLtV/63uORgSTfZLk63KVP1qZur9wO//9NPP0P020W/pJZfLTxkMhvs1NTUwGAw8lZWVjveKigrHe3l5OU9ZWRlPaWkpT0lJCfR6Pf+el5cHpVIJhUIBmUyG5OTk+2Kx+LhgAaqqqu6Pjo5iYGAAPT096O7u5unq6uLp7Ozk6ejoQHt7O09bWxtPa2srT0tLC09TU5MjUHFxMXQ6HeRyOZKSkn4QLMDt27fx4wAPkpfJsnD9+nVIpUmQSBKRkJCAhIR4rsK8fHNzM3+k9LYj8aMAmJcAP1d9DnvlH1T92tpavvr6XyNAaLkFm3QWeGRP8qyRT2CtfAJe8gl4y8fhIxuHr2wCfrJx+MvGEZA1jsAsIzZkjWGjzIg1ycNgzneDznWBvu4EfcXRASb8Dp47rYdEIhE2wGs3LXi++Du462bgnjsDj9wZrNHOYK12Gl5aC7y10/DRWrBOa4af1gJ/jRkBmikEaqbgpzLhUfEIKGYIFD0IihoEXRkARfaDudAGNqxC+AC786ewsfBbuKmn4aa2wF1jgYfagjVqMzzVZnipzfBWTcFHNYV1yin4Kk3wV5oQoDThL5IRq3TUgEOcLveBLvWBOdcC9miZsAHq6urwau4kNhTcwyqlmcctxwz3nCl45JiwJmcKngoT1iom4a0wwUcxiXWKSfgqJrA4efQn0vRNL+hiDyiiB8zZu2AP6ZGYmChsgF2qcQTqpuGabYKr1oJVFX+HW8X3WK21OM4JT+680JrhZfgePobv4aEy4RFO3C4tHgblToO0M6C4QdD5LjBnGsEeKBY+wE6FEYFaM1xkk3C5MQPXontYVXQPboUzWJ05DvfMcazJHIdn0QzW6r/l+b3CNKfalDUJUkxZyZy0nsSnG8DuLxQ+wCuyEQSop7AiYwIrVCa4aExYqTFhldoEt3QjVqcb4Z5mhIfWBE+dGU/KJ0DSUdCFbr7S/PS5NgpKNlq5NgL6sh3MqXqw7xXwvxmCBtiRPgS/HBOWpRqxPGMMK+RjcJGPYWW6Ea4po3BLGcHq5BG4pxuxJNMIih8EfdMDOtdpG5sdoItdIPEgSDwAOt8JCm8Fc7wO7L48xMfHCxtge2o/fOUTWHp9lGeZdAQrpCNwkY5gpXQYrtIhrOLek4bwuwj7rO8AnW3nK01n2kBftPHSdLoF9HkL6FQzmLBasCG5wgcIlvbCJ2MMS64NY0nSMJYmDWFZ0iCWS4bgIhnESskgXCWDePybLtDZjp9Kh7fYxJt5cTp5F3SiCcynNWDf1AobgPsXIFjSC+/0USxKGMSi9DEs0X+LpfrvsCzdiOXx/VgR34+nIntA0f0g7TRIMw260jtX+lI3SGOxrl3sBIU1ggmtBrtHBbFYLGyAl8Wd8EoZxkLxABbqLFh0YwaLb8xgqc6MZXF9WBjdA+ZMKyhzYnbSZEzYKn0XdLzJ+t2xNg769A6Ywwawr+UIH+Clqx3wlA7j2dhePCefwELlJBYpJ7GY+7GK6sGjX7Za+zppZHbScJ+PN4KONYLCGkASpzXJMCj0NpiDFWB3ZQsfYEtMGzwlg3gmqhvPxPXj2bRRLMwYxaK4Pvzh67bZvj7bBoobsPJFC+izBr7S9Ek96HQz6Gq/lVN3QYdrwXxUDvYVOeLi4oQLwF2JvRjZDI+EPjwd2YWnL3XhmUudePZSJ544186fjHyL2Cttl7aLH73NV5uO1PHSdKgW9HEN6OAtMB+Ugt0mEz7A5ktNcI/rwYKLHVgQ0Y6nIzqw4HwbHjnhLP4w6Ton6RrQgVugj6p5mPdKwG7NFDZAdXU1NkU0YnVsN0QX2iAS92HBzXt4LHcGdKHTSboexB0RtRmktoDOtlqlbdWmM83WNZUFFH4X9IEBzL4isC9n4OrVq8IGCPq6AauudOLJr1rwlGoKj2vM1mmSPj5baQ5uutgnDbdmr/aHVdbv9rW0MdC7FWD23gS7JVXYAFVVVQg6Ww/Xyx144otm/CnVCMZ5mjj3deLw7KRJHALtr+IrTe8brN+d1/aVgXn7BtjNqYiNjRU2wMYzdXC52IY/f96IR8KdpsmJxrl9fawBFNsPiu0DfVYPer8S9F4FX206WgeK6bNypBYUUgrmjXywL6QIH2BDeC1WnG/FY5/cnj0Zub4+UD3bIo5qc9KVVul3ykH7ykF/KwPtLbUSoge9rQe9VQJmTx7YTcnCBuBuYK3/vAaLzzSB+fjW3L5+oLRdvGxW3Ema3iwGvVEM+msRmN25YIOuIyYmRrgA3L2cgJM1WHCyHsxHVSCuhVS2aXK6abZFOOmTDSDVFEhpBh2vd5IucUjTHo6boNcLwezSgn1e4ADcLUOvz6ogOlYHZr8BlD42d5o4t0ia01qq0VbtIps4J30T9FohaPcN0Ks3wOxQg90gFTYAd6/T82glRJ/WguGqneA0TbjPIfYWKfnR2uADpWlXAWhnPuiVfDDblGDXSxEdHS1wgCMVEIXWgHmnDBTqNE0O1czt64PVoOheKx8aQLsLrdKvFjiJ54F25IG268BsVYANvCZsAO4us+eRcoiOVIPZq394X3OVfr3QqdrO0vkOadqmAwXngrZqwWzJBhuQNA8BDpdD9LEBzFs26Tl9XfjQFpkjvS0XFKzlxellDeglDZjNMrB+EkRFRQkc4FAZRAcqwXDiv9DXzi1ilc6dI01b1KAXVaDNKjBBmWD9EuchwMFSiPaXg+Gq/Qt9PVda6ySt5qVpsxL0ghK0KQfMxnSwvgnzFOD9MjC7Hyat+6n0S2qnas9KU1AO6HkFaGM2mMA0sD7xuHLlisABDughelcPZmc+/tPp5YCXDtbiXxcvOLBLh1cEOHBI592bZb0cjH8KWG8xIiMjhQvAbUp4flgC0b4SMDt0+HelmwN7X/8zNNSBvdJ7Ml9wwFWbNsitF/2ZNvyzwKxLBusVNw8B9pdAFFIEJliL+5rlDux9/Y/tOx1QkIKvtldksAMKlIECZNYfugQb6zLA+EjBrp2XAMUQvVUI5n/oa9qQzbeHQ9o/C+SfCfLLBPlm8OLkk87DeFsDXL58WbgA3J6W5wdFEL1RAIYT/znp9TKbOCed9UBpcmLeAgQdLoFopxrM+kxQgJ0MkH8GyI8jHeRrY12aFR+O1J+F8U7CH9eLhQ/Q29vL7/9y+7yNjY1oaGjAnTt3UF9fD24Lirt/yt0/unXrFrhraO4iyHkj3L75/bBdystCBuD+2G8iwN69IQgO3jqHbdu2IiQk5NcNkJ+ff1/oIxARESHcowYxMTEndDrd/YKCAmg0Gh6VSsWTk5PDP7SRnZ3Ni2RlZfFkZGTwpKWl8aSmpiIlJYV/7OA6/ziClN+d5/bGIiMjfwgLCzsmWID/x9d/AXn7hhUhMINDAAAAAElFTkSuQmCC">
+                    <strong class="mx-2">Phone:</strong>
+                    <span class="mx-2">8552072777</span>
                   </li>
-                  <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
-                      class="h-5 mx-3 fill-current inline-flex text-slate-800 hover:text-blue-700 hover:shadow-lg hover:shadow-blue-500 "><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <li class="flex flex-row m-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 50 50">
                       <path
-                        d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+                        d="M17.791,46.836C18.502,46.53,19,45.823,19,45v-5.4c0-0.197,0.016-0.402,0.041-0.61C19.027,38.994,19.014,38.997,19,39 c0,0-3,0-3.6,0c-1.5,0-2.8-0.6-3.4-1.8c-0.7-1.3-1-3.5-2.8-4.7C8.9,32.3,9.1,32,9.7,32c0.6,0.1,1.9,0.9,2.7,2c0.9,1.1,1.8,2,3.4,2 c2.487,0,3.82-0.125,4.622-0.555C21.356,34.056,22.649,33,24,33v-0.025c-5.668-0.182-9.289-2.066-10.975-4.975 c-3.665,0.042-6.856,0.405-8.677,0.707c-0.058-0.327-0.108-0.656-0.151-0.987c1.797-0.296,4.843-0.647,8.345-0.714 c-0.112-0.276-0.209-0.559-0.291-0.849c-3.511-0.178-6.541-0.039-8.187,0.097c-0.02-0.332-0.047-0.663-0.051-0.999 c1.649-0.135,4.597-0.27,8.018-0.111c-0.079-0.5-0.13-1.011-0.13-1.543c0-1.7,0.6-3.5,1.7-5c-0.5-1.7-1.2-5.3,0.2-6.6 c2.7,0,4.6,1.3,5.5,2.1C21,13.4,22.9,13,25,13s4,0.4,5.6,1.1c0.9-0.8,2.8-2.1,5.5-2.1c1.5,1.4,0.7,5,0.2,6.6c1.1,1.5,1.7,3.2,1.6,5 c0,0.484-0.045,0.951-0.11,1.409c3.499-0.172,6.527-0.034,8.204,0.102c-0.002,0.337-0.033,0.666-0.051,0.999 c-1.671-0.138-4.775-0.28-8.359-0.089c-0.089,0.336-0.197,0.663-0.325,0.98c3.546,0.046,6.665,0.389,8.548,0.689 c-0.043,0.332-0.093,0.661-0.151,0.987c-1.912-0.306-5.171-0.664-8.879-0.682C35.112,30.873,31.557,32.75,26,32.969V33 c2.6,0,5,3.9,5,6.6V45c0,0.823,0.498,1.53,1.209,1.836C41.37,43.804,48,35.164,48,25C48,12.318,37.683,2,25,2S2,12.318,2,25 C2,35.164,8.63,43.804,17.791,46.836z">
+                      </path>
                     </svg>
-                    <strong class="mx-3">GitHub Id : </strong>
-                    <span class="mx-3"> Jayesh2124 </span>
+                    <strong class="mx-2">GitHub_Id: </strong>
+                    <span class="mx-2"> Jayesh2124 </span>
                   </li>
-
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
-                      class="h-5 mx-3 fill-current inline-flex text-slate-800 hover:text-blue-700 hover:shadow-lg hover:shadow-blue-500 "><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                      <path
-                        d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
-                    </svg>
-                    <strong class="mx-3">Degree:</strong>
-                    <span class="mx-3">Master Of Computer Application</span>
+                  <li class="flex flex-row m-2">
+                    <img class="h-6"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACCElEQVR4nO2aTUoDQRCFP0EXIYIalOz0ALmEunSnBxC3RkRcKIiioktFtwoBPYO5gD8rEYwKHiAudCX4kygo2hKogSZMQjrpHkfTD3qR7qp69aYm1UnPgIeHR7MYADaAS6AEqIjGG3Al3JUcWsI48Bxh8rXGk+TStIgvCXQEDANJ7GMM+AzhSQIjQF7WvpoRM6BVYgl3SAGPDfAsa5XpNyHY0K6QS6wZ8OTFdt2EoCBOlTK7hAnPqNhWmk7DeBWn7uZztM7TLbYvJgRBt3ANUx5lmte/E6IiGs6EnEUo4tSlkN++5WrBC2nLiqgIGoDyQtrx1ooCygtpx4oo37WIV/uNAsoLqYKvyH++tSaAB+De4LxKxUXIEHBTo0t9A9fAoEN+a4F2xb8kJ4fzwIyICM6VdxzyWwmUBm61c6yEtpaQOSU2aQf81gJdiO8d0BOy3itrFZtzB/xWAnVoB9WZOnYZsfkQH1v8VgMdim+ujk1ObA4c8FsLNC2+m3VstsVm1gG/tUBZ8S0CW0CXttYpc0WxWXTAby1QX9W+kZXHCqtatYKRcsBvNVArJyixFLIiO/w+sCd7x8JfFFILXogpWvlfrvsHm19BRrBJhtkqg+9QJI8b9OSmgLL2uSxzjQg5JQaoTupQ2/GtXnHXCBJ9B+a0+cmq10NijxN5vyTsh2NG1o5/Ia/44QfeTwzwWfK6YwAAAABJRU5ErkJggg==">
+                    <strong class="mx-2">Degree:</strong>
+                    <span class="mx-2">Master Of Computer Application</span>
                   </li>
-                  <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
-                      class="h-5 mx-3 fill-current inline-flex text-slate-800 hover:text-blue-700 hover:shadow-lg hover:shadow-blue-500 "><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                      <path
-                        d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
-                    </svg>
-                    <strong class="mx-3">Pass out:</strong>
-                    <span class="mx-3">2023 Batch</span>
+                  <li class="flex flex-row m-2">
+                    <img class="h-6"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACIklEQVR4nO1TTW/TQBBdbj30B3DgGMQp3kpZf2wqIUAce4ULP4g/UirUppFQDlSQEkEiJAgSpBHiEHVtr8dVEQKJC1wKi8bEiISAvTip02qf9CR7PPP2PXtMiIGBgcG5BHjsZsztFzFnA+DOLUXIBXK2jNtqkkseBP5qfMmDQG7jSxYEuL0BHuvrG58keKyPWsv4xh9Lr+ZErmvFnG0Dt7+X+kVA0/j0fLTu0FKCgIbxyK25WXqnFgRy7jh4bC9adzxdfZwBj+0t7B/JFOZ2L3Jr17SFZwSJPdbKOm9uARLjdec6mTOgbvN/BSkcIDHOnRtkwQDO6rOCaAudtvGsIEQXMbc7R9y+OlGToUJGgfgGgfgaisMP0hcCQr8HYbAFMrgLYXj7ve9fnNbDGj772ZP0dqPAH8lAHIMvvkDgn6T6v8+hB/SiHWBmqPEBWYQwOJFitJPOgS82sZZ3nswbQ0oVMq+BlO3tzYS6c8PxeSZACvMFpFmhYjArJM0KFYNZIWlWqBjMCkmzQsVwblaoPTa039hSneZ99exBQ3VbTfX8YUu9fPJIvek9Ve9ev1Lh4eiPAFjDZ9iDvTjTbTUTDdRCzbR/4QGyuL9zT/U77V/3eI21vPPDRQXQ4Z3VVbWxspIQr/9Hg5QZYLdSSYwjG5VKuQF0MKhWrwwp/TRt5oDSj4Nq9RI5CxhgCMtqHljW54SU7r5dW7tcti8DAwMDMnf8AFUtyNH10Nv2AAAAAElFTkSuQmCC">
+                    <strong class="mx-2">Pass out:</strong>
+                    <span class="mx-2">2023 Batch</span>
                   </li>
-                  <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
-                      class="h-5 mx-3 fill-current inline-flex text-slate-800 hover:text-blue-700 hover:shadow-lg hover:shadow-blue-500 "><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                      <path
-                        d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
-                    </svg>
-                    <strong class="mx-3">Email:</strong>
-                    <span class="mx-3">jayeshsutar1108@gmail.com</span>
+                  <li class="flex flex-row m-2">
+                    <img class="h-6"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAIEUlEQVR4nO2ZaXBb1RmGaX92pqWUIbRAWwhNSimQpA00pGlDHUIotAkpSUuGzLTA9E+mQ5o9KQQHSEKahFASYpoNE0IWSZFt2ZIdb5Ilr5Jly5IjWZK13Kv9StbmRfL+ds5xrVqbYxxnBqY+M+9YM+fe7zzv/b5z7rnHt90222bbbJtts20mGoCvsyz7d5ZlO1mWHXU4HJiOnE5nVrlcroxyu91Z5fF4qNxu96jH4+l0u92bAXwtzYDT6dwyncCZ5PV6M8rn82UVx3FZ5ff7U7U5zYDX67XMQGCqQCCQVV1dXVkVDAazKhQKJRQMBs1pBgKBwOgXDTwxaKrC4XBWRSKRrIpGo1nV3d1NFY1GR9MMyOVy680EnSgm2A21JwqZIwqJLYJaRxRt3ii6It3o6emh6u3tzai+vr6sisViVHV1ddY0A1evXoVQKAxHIpH+6QS2h/twrrMHr6sjWCcP4Q+yLqyp8uN35RyeK/ViVYkbzxW7sVnmhdAYRHdfHP39/Rk1MDCQUbFYbEgkEvkJa5qB0tJSFBQUQCAQDLtcLs9UA4f6+pFn6cPGpij+WBem8Gul6fAri1zIETrwFJ/Br67Y8Xshg1JLBMPDwxk1MjKSpK6uLh+PxxsqLCwEYU0zIJPJUF5eDpFIBD6fD5VK1XmjoEzvELZo+7ChcQz+T4oQDusiqHL0gAnHEOmLIxbvh687jjZfL863B/GyxIVfXrRiyWedeDzfhHcUXgwNj2B0dJQqdQwybnNzs5UwFRUVoaKiAoQ10xxATU0NKisrUVJSQjJB/gYGBwcHU4MSufoG8deW3gT8fm0UTCSWtSzGRQxJzCHkXOzEz88asfCUAbnVjrTr4vE4Kd0hiUTiIyVDmAgb4STKaGBcUqkUEomElhRJG8dx/omBQ70xbGvrScB/Yu5GPD45eKpsXb145oIZj+Vdx09PtONyq5dO7vGFwOPxBPl8/gBhICyEaSJj1gyMX0DSVFZWhuLiYmKCpnE8+EVrN15qGIN/Xx/NCOjvjiPQM3lGdO4oFuVdx0P/0mLpxzq4ubElm4zF4/FGSclcu3aNsoxzjTNOmoGJF1dVVSVKSiQScTavf/gvZMLWhvFKfQjh3hjNClEsHofAFMZLZW46YZfzGbxS6oDW041qawgvF9qxQWjFKZUvcc/blQzmv6/Bg4dbcFpuGRWLxW6hUEgfHCmZifBTNjAxE+R3dXU1nfkk8OHSpiEC/2JNEHxLNGk5Pa7pwtOFTvzmKovlPAbLLtuw9HMLci5ZcVLlw8/OdGDhvw3IrXIk1nQLF6XwD7ynxqoPZCNkDFIyZMxUpolcN8xA6g3kSZB0bpVaKPza6gBcof+9kJSuaBL8KoEdO6QuvCpm8PgnpgT8oyevY28Fk/SOWZ6nGfnBfhXm7W+gK2FqvWfSlEook6mNMg4vVAewqTaQ9Pbd1+BLwD8rsMPkDSf68tVeLPgv/MPHdXjjmi3p3lcv63Hv20343lsNqJQmZ39GDIwHkskVWCsNYHWFH/uU/qTtxnqxE8t5diy7ZMORendSXygcwdP5HRT+oQ/asFtiTerfVmii8HPeqEdB+Y0f5LQzUCqvx+oKDs+X+XCkmUvatK0QMBT+yQsWXGnzpm3gXhOaKfy8oxrsLDYn9W3i6Sn8nbtrIam6hQbK5XUU/lmxB4eUvqSd6YorY/C/+NSMz1vdaTvXP/OMFH7uP1uwvciU1LfurJbC37NHDmnKqjOzc0Aux/NiN54RubBL7kna568vsFH4xedMyK1ikvq8nB9LTmop/P0Hm7GloCPR5/H5cX9uA+7YIcfSA1ODn7YBovUldqwocGCD2JH0cZMrZbD4nBGLTndgyRkD6k3uRN/+8s4E/PffVWLjeV2i72S1mcJ/a6sMuz6tufUGdl4z4ikBi19fsUNj8yS+3JSdbiw+a8SCj/V45KN2LDihw7oLBuSc1lH4R4+qKfy9+5pwX24j3iwy4K0iA+bsVlD4eXsVUDQob50BhUKBtrY28FsZCk92lO/J2aRv4RMKG4V/+EMdfnysDT860krhHzykRqWWwfLjLfju3gbc9Y863LlLgW9vH3vyc3bIUNJkAsMw0Ol0M2+gtrYWRqMRLMvCyrBYc9WKJz+zYNl5M1rMjqSDAJ7KhtX51zH/aCvmHlIjJ0+DAqWF9mlMLNafacXde2op/JwdNViXp0Kd1kJjj8tkMpGvrpkxoFQqYbfbk45OzivteCLfTLfDL1wywmhj045X7Awxm/nYxc46oTUxYNj0+xL32+3km+TmDJCSyXTW43A6sVlswaJTBjyWp8eaC3o06u1JT/FGutEZkpOM43BkLalJDZD0mc3mSc+FLKwLL14y4pET7fjJh1osPK5FrrgDWjMzJfDJYrtTx7JYUF9fPzUDpGTIINkOpyaKcXnwt0Ij5h/T0An7wCE15h5sxsq8Vmzh63BQrMdHFQYcK9PjgKgdr+W3YtMFzZRie1NETBO2SQ2QdE12kJVNAjWL357R4YcHVLjvHSXuyW3E3W/W4649dfjOTgVu316Db26R4RuvVyPnSOO0xuA4ji7Xer0+swGr1TrtwDQ4x6GsjcXe4g6s/KgF899tpEvl7dvG4O/YKsUTB+qRK2y/qXE4jgNhTTPwRSbgVEVWonaTHZ22yecFOw2lGdDr9YNk/f0qyGAwDKQZUKlUBVqtFl8FqVQqQcb/DzQ1NRW0tLQMajQafBmlVqsHlEqlgLCmGZhts222zbbZ9n/Z/gNVS0elXLBIgQAAAABJRU5ErkJggg==">
+                    <strong class="mx-2">Email:</strong>
+                    <span class="mx-2">jayeshsutar1108@gmail.com</span>
                   </li>
-
-
                 </ul>
               </div>
             </div>
             <p>
-              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero.<br>
-              Quisquam sunt adipisci omnis et t. <br>
-              Nulla accusantium dolor incidunt officia tempore. Et eius omnis. <br>
-              Cupiditate ut dicta maxime officiis quidem quia. <br>
-              Sed et consectetur qui quia repellendus itaque neque. <br>
-              Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui <br>repellendus omnis culpa magni laudantium
-              dolores.
+              My journey began with an enriching internship experience at RBIS Technology Private Limited, where I had
+              the opportunity to apply theoretical concepts into practical solutions. The exposure and challenges
+              encountered during this period further fueled my drive to excel in the tech industry.
             </p>
           </div>
         </div>
-
+        <p class="py-2 my-4">
+          Continuing my career journey at RBIS Technology, I have consistently demonstrated my commitment to delivering
+          high-quality results. My dedication and proficiency have earned me the opportunity to contribute significantly
+          to the company's success.
+          Beyond my professional endeavors, I possess a keen interest in photography. I find solace in capturing moments
+          and expressing creativity through visuals. This passion for photography parallels my approach to coding and
+          development - constantly striving for precision and innovation to achieve optimal outcomes.
+          I am motivated by challenges and thrive in environments that encourage growth and innovation. With a unique
+          blend of technical expertise and creative flair, I am eager to embark on new opportunities and make meaningful
+          contributions to projects that align with my values and aspirations. </p>
       </div>
     </section>
     <!-- End About Section -->
@@ -223,7 +220,7 @@
     <section id="facts" class="facts">
       <div class="container">
 
-        <div class="mt-[70px] px-5">
+        <div class="mt-[50px] px-5">
           <p class="text-4xl salsa-regular  text-[#173b6c] font-bold">Facts</p>
           <hr class="w-24 h-2 my-2 bg-cyan-700">
           <blockquote class="font-bold text-lg">
@@ -276,7 +273,7 @@
 
         <section class="text-gray-600 body-font">
           <div class=" px-5 py-0 mx-auto">
-       
+
             <div class="flex flex-wrap m-2">
               <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
                 <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
@@ -546,66 +543,6 @@
           </div>
         </section>
 
-        <div class="row skills-content">
-
-          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up">
-
-            <div class="progress">
-              <span class="skill">HTML <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
-                  style="width: 100%;"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">CSS <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
-                  style="width: 90%;"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">JavaScript <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-                  style="width: 75%;"></div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="progress">
-              <span class="skill">PHP <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                  style="width: 80%;"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">WordPress/CMS <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
-                  style="width: 90%;"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Photoshop <i class="val">55%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"
-                  style="width: 55%;"></div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
       </div>
     </section><!-- End Skills Section -->
 
@@ -613,16 +550,17 @@
     <section id="resume" class="resume">
       <div class="container">
 
-        <div class="section-title">
-          <h2>Resume</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-            in iste officiis commodi quidem hic quas.</p>
+        <div class="px-5">
+          <p class="text-4xl salsa-regular  text-[#173b6c] font-bold">Resume</p>
+          <hr class="w-24 h-2 my-1 bg-cyan-700">
+          <blockquote class="font-bold text-lg">
+            Some summarized information about my career in one part..
+          </blockquote>
         </div>
 
-        <div class="row">
-          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up">
-            <h3 class="resume-title">Sumary</h3>
+        <div class="flex flex-col md:flex-row">
+          <div class="flex flex-col w-1/2 rounded-2xl ">
+            <!-- <h3 class="text-4xl salsa-regular  text-[#173b6c] font-bold">Sumary</h3>
             <div class="resume-item pb-0">
               <h4>Alex Smith</h4>
               <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and
@@ -633,28 +571,40 @@
                 <li>(123) 456-7891</li>
                 <li>alice.barkley@example.com</li>
               </ul>
-            </div>
+            </div> -->
 
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Master of Fine Arts &amp; Graphic Design</h4>
-              <h5>2015 - 2016</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui
-                ut dignissimos deleniti nerada porti sand markend</p>
+            <p class="text-2xl salsa-regular  text-[#173b6c] font-bold">Education</p>
+            <div class="resume-item rounded-3xl bg-cyan-100 p-4 mx-2 m-1">
+              <p class="font-semibold  text-lg">Master of Computer Application &nbsp;&nbsp;&nbsp; <span
+                  class="font-normal text-sm"> 2021 - 2023 </span> </p>
+
+              <p class="underline"><em>School of Computer Science, North Maharashtra University, Jalgaon</em></p>
+              <p>Obtained <b> CGPA : 8.46 </b> and learned About complier construction, DSA, Major in Java <br>
+                and Minor in Microsoft ASP .Net </p>
+              <p>
+                In Minor project of Java Desktop application created and learned about <br>
+                Java and JDBC And got selected in RBIS in campus placement within university training session.
+              </p>
+              <p>
+                Completed Internship during post-graduation in RBIS Technology in Angular, Bootstrap, .Net core, and Sql
+                server
+              </p>
             </div>
-            <div class="resume-item">
-              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-              <h5>2010 - 2014</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius
-                unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart
-                dila</p>
+            <div class="resume-item  rounded-3xl bg-purple-100 p-4 mx-2 m-1">
+              <p class="font-semibold text-lg">Bachelor of Computer Application &nbsp;&nbsp;&nbsp;<span
+                  class="font-normal text-sm "> 2018 - 2021 </span> </p>
+
+              <p class="underline"><em>Moolji Jetha College, Jalgaon</em></p>
+              <p>Obtained <b> CGPA : 9.46 </b> and learned about web development and completed the minor by creating
+                Construction business website using HTML CSS And JavaScript. </p>
+              <p> also obtained the university level course certificate in web development and field report in Cyber
+                Security </p>
+
             </div>
           </div>
-          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
+          <div class="flex flex-col w-1/2">
+            <p class="text-2xl salsa-regular  text-[#173b6c] font-bold">Professional Experience</p>
+            <div class="resume-item ">
               <h4>Senior graphic design specialist</h4>
               <h5>2019 - Present</h5>
               <p><em>Experion, New York, NY </em></p>
@@ -878,190 +828,257 @@
 
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials section-bg">
-      <div class="container">
 
-        <div class="section-title">
-          <h2>Testimonials</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-            in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div
-          class="testimonials-slider swiper swiper-initialized swiper-horizontal swiper-backface-hidden aos-init aos-animate"
-          data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper" id="swiper-wrapper-9b11f1fa483d13b9" aria-live="off"
-            style="transition-duration: 0ms; transform: translate3d(-647.333px, 0px, 0px); transition-delay: 0ms;">
-
-            <!-- End testimonial item -->
-
-            <!-- End testimonial item -->
-
-            <!-- End testimonial item -->
-
-            <!-- End testimonial item -->
-
-            <!-- End testimonial item -->
-
-            <div class="swiper-slide" role="group" aria-label="4 / 5" style="width: 303.667px; margin-right: 20px;"
-              data-swiper-slide-index="3">
-              <div class="testimonial-item aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit
-                  minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-              </div>
-            </div>
-            <div class="swiper-slide swiper-slide-prev" role="group" aria-label="5 / 5"
-              style="width: 303.667px; margin-right: 20px;" data-swiper-slide-index="4">
-              <div class="testimonial-item aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa
-                  labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-              </div>
-            </div>
-            <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 5"
-              style="width: 303.667px; margin-right: 20px;" data-swiper-slide-index="0">
-              <div class="testimonial-item aos-init aos-animate" data-aos="fade-up">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium
-                  quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-              </div>
-            </div>
-            <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 5"
-              style="width: 303.667px; margin-right: 20px;" data-swiper-slide-index="1">
-              <div class="testimonial-item aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis
-                  quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-              </div>
-            </div>
-            <div class="swiper-slide" role="group" aria-label="3 / 5" style="width: 303.667px; margin-right: 20px;"
-              data-swiper-slide-index="2">
-              <div class="testimonial-item aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim
-                  tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-              </div>
-            </div>
-          </div>
-          <div
-            class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
-            <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button"
-              aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0"
-              role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0"
-              role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0"
-              role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0"
-              role="button" aria-label="Go to slide 5"></span>
-          </div>
-          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-        </div>
-
+      <div class="mt-[50px] px-5">
+        <p class="text-4xl salsa-regular  text-[#173b6c] font-bold">Testimonials</p>
+        <hr class="w-24 h-2 my-2 bg-cyan-700">
+        <blockquote class="font-bold text-lg">
+          Some words by trusted persons worked with...
+        </blockquote>
       </div>
+
+      <!-- Corosole part -->
+      <div class="min-h-screen  p-3 relative">
+        <div class="w-96 mx-auto" style="scroll-snap-type: x mandatory;">
+           <!-- first -->
+           <div class="">
+              <input class="sr-only peer" type="radio" name="carousel" id="carousel-1" checked />
+              <!-- content #1 -->
+              <div
+                 class="w-[90%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0">
+                 <section class="text-gray-600 body-font">
+                  <div class="container px-2 py-12 mx-auto">
+                    <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-400 mb-8" viewBox="0 0 975.036 975.036">
+                        <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                      </svg>
+                      <p class="leading-relaxed text-lg">I want to commend jayesh for his outstanding work and dedication throughout the project lifecycles. His attention to detail and problem solving skills have been exceptional, consistently exceeding my expectations. His ability to meet deadlines in a fast paced environment while maintaining a high-quality standard is really impressive. But the best of all is his positive attitude and ever smiling face. Jayesh has been a joy to work with and I highly recommend him to anyone seeking a skilled and dedicated developer.</p>
+                      <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
+                      <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">Jeet Shah</h2>
+                      <p class="text-gray-500">Data Engineer - IDFC First Bank</p>
+                    </div>
+                  </div>
+                </section>
+                 <!-- controls -->
+                 <div class="absolute top-1/2 w-full flex justify-between z-20">
+                    <label for="carousel-3" class="inline-block text-red-600 cursor-pointer -translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                       <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
+                       </svg>
+                    </label>
+                    <label for="carousel-2" class="inline-block text-red-600 cursor-pointer translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                       <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
+                       </svg>
+                    </label>
+                 </div>
+              </div>
+           </div>
+           <!-- second -->
+           <div class="">
+              <input class="sr-only peer" type="radio" name="carousel" id="carousel-2" />
+              <!-- content #2 -->
+              <div
+                 class="w-[90%]  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0">
+                 <section class="text-gray-600 body-font">
+                  <div class="container px-2 py-12 mx-auto">
+                    <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-400 mb-8" viewBox="0 0 975.036 975.036">
+                        <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                      </svg>
+                      <p class="leading-relaxed text-lg">Dedicated, committed to finishing the task that he sets out to achieve. Fast learner and always willing to go the extra mile to understand client needs and help them in the most efficient way possible.</p>
+                      <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
+                      <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">Chithralekha Nair</h2>
+                      <p class="text-gray-500">Manager - EY </p>
+                    </div>
+                  </div>
+                </section>
+                 <!-- controls -->
+                 <div class="absolute top-1/2 w-full flex justify-between z-20">
+                    <label for="carousel-1" class="inline-block text-blue-600 cursor-pointer -translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                       <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
+                       </svg>
+                    </label>
+                    <label for="carousel-3" class="inline-block text-blue-600 cursor-pointer translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                       <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
+                       </svg>
+                    </label>
+                 </div>
+              </div>
+           </div>
+           <!-- three -->
+           <div class="">
+              <input class="sr-only peer" type="radio" name="carousel" id="carousel-3" />
+              <!-- content #3 -->
+              <div
+                 class="w-[90%]  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0">
+                 <img class="rounded-t-lg w-96 h-64" src="https://images.unsplash.com/photo-1628718120482-07e03fe361dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=384&q=80" alt="" />
+                 <div class="py-4 px-8">
+                    <h1 class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight">
+                       Consectetur purus ut faucibus pulvinar elementum.
+                    </h1>
+                    <p class="hover:cursor-pointer py-3 text-gray-600 leading-6">Aliquam ultrices sagittis orci a
+                       scelerisque purus semper. Quisque id diam vel quam elementum pulvinar. Facilisis magna etiam
+                       tempor orci eu lobortis elementum.
+                    </p>
+                 </div>
+                 <!-- controls -->
+                 <div class="absolute top-1/2 w-full flex justify-between z-20">
+                    <label for="carousel-2" class="inline-block text-yellow-600 cursor-pointer -translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                       <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
+                       </svg>
+                    </label>
+                    <label for="carousel-1" class="inline-block text-yellow-600 cursor-pointer translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                       <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
+                       </svg>
+                    </label>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     <a href="https://www.buymeacoffee.com/dgauderman" target="_blank" class="md:absolute bottom-0 right-0 p-4 float-right animate-bounce">
+     <img src="https://www.buymeacoffee.com/assets/img/guidelines/logo-mark-3.svg" alt="Buy Me A Coffee" class="transition-all rounded-full w-14 -rotate-45 hover:shadow-sm shadow-lg ring hover:ring-4 ring-white">
+   </a>
+
     </section><!-- End Testimonials Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
-      <div class="container">
+      <div class="w-full">
 
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-            in iste officiis commodi quidem hic quas.</p>
+        <div class="mt-[50px] px-5">
+          <p class="text-4xl salsa-regular  text-[#173b6c] font-bold">Contact</p>
+          <hr class="w-24 h-2 my-2 bg-cyan-700">
+          <blockquote class="font-bold text-lg">
+            To reach more and extend network contact info is there...
+          </blockquote>
         </div>
 
-        <div class="row aos-init aos-animate" data-aos="fade-in">
+        <div class="flex flex-col-reverse md:flex-row gap-3 my-2 w-full">
 
-          <div class="col-lg-5 d-flex align-items-stretch">
+          <div class=" d-flex align-items-stretch w-full md:w-1/2">
             <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
+              <!-- Location -->
+              <div class="flex flex-row gap-1">
+                <div>
+                  <img src="data:image/png;base64,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"
+                  class="h-12">
+                </div>
+                <div class="">
+                  <p class="font-bold text-lg underline py-0 m-0" >Currenct Location :</p> 
+                  <p>Pyramid County, Paud road Bhukom, Pune - 412115</p>
+                </div>
+              </div>
+              <!-- Email -->
+              <div class="flex flex-row gap-1">
+                <div>
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFNklEQVR4nO2Z+1MbVRTHM6MzOqP+quF3X+Or/4DwGw6v0pZQJIAjhY4iaoDwSsUktsBMqQ+eggVC6VhbDCVUC7VjaLEFHGyTkL1JpdmlnSm0P8gjJgXLboIc524IkJKE7GZDp2POzHcmz7P72XPOvWfPikRRi1rUova/NcZm2UVTSM5QSEuTBEGTyE5TyMWKfU2Y174rwb8N5mtR//ybWE79C8kOvfiuUy+ecQ6JEyN28jA5+RxNoVKGIv5kKATcRNzA4GC1PhsYRDzjHIoBj8TTwgMMDz+JryxNEQvcAXxFU8Q8TRLF2OfDx4koCH0TvUpTxES4AFuBkImeJF7xARkSJ66l1bRDL04QDoIiUmmKWBQaYlN07tOkebcoksZQlvdoCrkjBcFsRMbNkChHkJO2x6WP2WMlI76RiDwEswmGJi0p4YPESkYWYtOvshBTppdwyHcKgtlIs0VcjyLBVqcIFHbIMCQy+lvNOBu7eT0iCGYdhihy6GOyHfqYLH7RMJufoSk058/5nVE9/NTyDZyuqxZE2Nf02FCgFJvHGy//aLA79lbH59uaIH/ffmg/dQ7O6scFUfv3/ZC3Lx0GvmsKVPxy3iD+2g4cicLsXKg4/jsoVA0wRMzA2G1HWLpkvQdVh5ug4vgoFGblBogMcYMfhM2yy9+VwSlQfLgLFN0ToDhhhFJlC/RdNvGG6L+CoFjxFVR2GVifxWoN/Pxtvf96mTK/IVhadVerQFan84CsqbTmJHScucAZouusHuRHND6+ZHU69hiBip57RCikDRUES35MB8caT4YM0dChBXld7xY/suAgPdwjQiLEBQSrrOUyVKnr4crNvwICXLXNgvJII5Q16f36kAUDoYgJ7iAUMe+6QwJWqCBYFZ3XoFzZAL9cn9oC8evEbahUNUJFx3jA/8uCgqA5PiAMHxDPImCCEnUrnBocXYc4c3Ecig7VswtEsP/KgkeE5gXCNbXWi19jgD21F0Aib4L6jl5o7tZBekkjpNYOgrzTsOMg83xAcsuaIalcA/HqflYpFe2svO8TyzvhQGnzDqYWybHYTxghp7AWEko3TjqQEsq7IPujar9pJhO62Lksv5Waa5CR9xm8U9m9LcS6Dv0AGQeVUNn5R4SXX4od62wLUt42Aum5Coiv6gkdwitlL6TlfQ5lrb+FBmJDMu4RuYXeCtiiqDs97UT9Rdibr4J4dR93CK9UOtj7YQ3Ivh7w+FRp4Hxrg/8WhZp4nTMIGxUSWfw1jR/nHIDCWi3s/qCGP8BDSik4CgXVp+GTbIGbxmDpNdDWCBmJeyCx4CjEF7UIIuwrIyEVBje18avL/8Dq8pK3Pkp4gwS7scJXDXep7UqFIMK+ZsYu+RwDQ6w+WPLcWPmZRnKLCkkU+8/XndMyhT4NC2Jj+IBMjwqCJpEBQPuESAhbpqwv0hThfCzHQTD8/tMuQ2afy5C55DJIe2nbSNpODuiYSd2Km/jyi7CjwBikB91GKXjFmLLy8RhTaJh/7/8NqytucE1TmyKB3C5j9gOXUeoIH8SUle8DYszMw5/jMaaQU0dYWQFs7tm73nRy0jaU7L4uTXKb3g3/wQ6QCU/hlHIZpIsuY6YWv7e/LUmxx+5Ppm+ZX8YTQCFAXDNT4J69B8yUhS1sPJ4VRdrscRKnPVbi2PSgpyhQu8+tqNEcXmJBqNVpO1uIS0taiJP4hBtvVLgDoElk5QxAIgvescPe7IQ23NSxUSKJH/G9A34sh+801zTPfkYSPZ7fWF8T/ASiFrWoRU30uNh/GyPKERs5PiwAAAAASUVORK5CYII="
+                  class="h-12">
+                </div>
+                <div class="">
+                  <p class="font-bold text-lg underline py-0 m-0" >Email :</p> 
+                  <p>jayeshsutar1108@gmail.com</p>
+                </div>
               </div>
 
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>info@example.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
-              </div>
-
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-                frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen=""></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.7871395025554!2d73.71618430976925!3d18.493298582522414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bd253298362d%3A0xb1aecc13c42c4c72!2sPyramid%20County!5e0!3m2!1sen!2sus!4v1714987416174!5m2!1sen!2sus" 
+               style="border:0;" class="w-full h-[300px]"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
             </div>
 
           </div>
 
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required="">
+          <div class="gap-2 rounded-3xl flex flex-col justify-center items-center w-full md:w-1/2">
+            <section class="text-gray-600 body-font relative">
+              <div class="container px-auto py-6 mx-auto">
+                <div class="w-full mx-auto">
+                  <div class="flex flex-wrap md:flex-col md:justify-center">
+                    <div class="p-1 w-full">
+                      <div class="relative">
+                        <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
+                        <input type="text" id="name" name="name"
+                          class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                      </div>
+                    </div>
+                    <div class="p-1 w-full">
+                      <div class="relative">
+                        <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+                        <input type="email" id="email" name="email"
+                          class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                      </div>
+                    </div>
+                    <div class="p-1 w-full">
+                      <div class="relative">
+                        <label for="Subject" class="leading-7 text-sm text-gray-600">Subject</label>
+                        <input type="text" id="subject" name="subject"
+                          class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                      </div>
+                    </div>
+                    <div class="p-1 w-full">
+                      <div class="relative">
+                        <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+                        <textarea id="message" name="message"
+                          class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                      </div>
+                    </div>
+                    <div class="p-1 w-full">
+                      <button
+                        class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+                    </div>
+                   
+                  </div>
                 </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required="">
-                </div>
               </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required="">
-              </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required=""></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
+            </section>
           </div>
 
         </div>
 
       </div>
     </section><!-- End Contact Section -->
+
+    <!-- footer Section -->
+    <div class="p-1 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+      <a class="text-indigo-500">jayeshsutar1108@gmail.com</a>
+      <p class="leading-normal my-5"> Jalgaon, 425001 </p>
+      <span class="inline-flex">
+        <a class="text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-4 text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            class="w-5 h-5" viewBox="0 0 24 24">
+            <path
+              d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+            </path>
+          </svg>
+        </a>
+        <a class="ml-4 text-gray-500">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-4 text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            class="w-5 h-5" viewBox="0 0 24 24">
+            <path
+              d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+            </path>
+          </svg>
+        </a>
+      </span>
+    </div>
+<!-- Footer ends -->
 
   </main>
 
